@@ -25,12 +25,12 @@
 
   
 
-<link rel="canonical" href="https://fzglch.github.io/2021/03/03/%E7%BA%BF%E6%AE%B5%E6%A0%91/">
+<link rel="canonical" href="https://fzglch.github.io/2021/04/05/%E9%AB%98%E6%95%88%E7%AD%9B%E8%B4%A8%E6%95%B0/">
 
 
 
   <title>
-线段树 |
+高效筛质数 |
 YUME SEGAI = Darlin' 夢が叶ったの</title>
 <meta name="generator" content="Hexo 5.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -58,16 +58,16 @@ YUME SEGAI = Darlin' 夢が叶ったの</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">线段树
+  <h1 itemprop="name headline">高效筛质数
   </h1>
   
 <div class="meta">
-  <span class="item" title="创建时间：2021-03-03 18:54:02">
+  <span class="item" title="创建时间：2021-04-05 18:26:54">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
     <span class="text">发表于</span>
-    <time itemprop="dateCreated datePublished" datetime="2021-03-03T18:54:02+08:00">2021-03-03</time>
+    <time itemprop="dateCreated datePublished" datetime="2021-04-05T18:26:54+08:00">2021-04-05</time>
   </span>
 </div>
 
@@ -100,12 +100,12 @@ YUME SEGAI = Darlin' 夢が叶ったの</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexbei4hj20zk0m8npd.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeyvx1d4j20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclj61ylzj20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicitspjpbj20zk0m81ky.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipew8gmvyj20zk0m87wh.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph4fomxoj20zk0m8axp.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciryrr3rj20zk0m8nhk.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipey84bjtj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipew28b65j20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclfdu6exj20zk0m87hw.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipesng5oej20zk0m87d4.jpg"></li>
         </ul>
       </div>
     </header>
@@ -134,7 +134,7 @@ YUME SEGAI = Darlin' 夢が叶ったの</title>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
-  <link itemprop="mainEntityOfPage" href="https://fzglch.github.io/2021/03/03/%E7%BA%BF%E6%AE%B5%E6%A0%91/">
+  <link itemprop="mainEntityOfPage" href="https://fzglch.github.io/2021/04/05/%E9%AB%98%E6%95%88%E7%AD%9B%E8%B4%A8%E6%95%B0/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/images/try.gif">
@@ -149,22 +149,22 @@ YUME SEGAI = Darlin' 夢が叶ったの</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <p>这篇文章主要是讲的线段数相关问题</p>
-<h2 id="哪类问题是线段树问题"><a class="markdownIt-Anchor" href="#哪类问题是线段树问题">#</a> 哪类问题是线段树问题</h2>
+    <p>这篇文章主要是讲的复杂度 o（n）的筛质数，是个很简单的问题，忘了叫什么名字了，也无关紧要</p>
+<h2 id="质数"><a class="markdownIt-Anchor" href="#质数">#</a> 质数</h2>
 <h3 id="简介"><a class="markdownIt-Anchor" href="#简介">#</a> 简介</h3>
-<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>当有一堆比较大的数据，且常需要用到update和query的时候</pre></td></tr></table></figure><p>More info: <a href="">暂无</a></p>
-<h2 id="为什么要用线段树"><a class="markdownIt-Anchor" href="#为什么要用线段树">#</a> 为什么要用线段树</h2>
-<h3 id="普通数组与累积和数组"><a class="markdownIt-Anchor" href="#普通数组与累积和数组">#</a> 普通数组与累积和数组</h3>
-<figure class="highlight bash"><figcaption data-lang="bash"><span>h  </span></figcaption><table><tr><td data-num="1"></td><td><pre>用普通一维数组，时间复杂度上，前者是o（1），后者是o（n）  </pre></td></tr><tr><td data-num="2"></td><td><pre>用累和数组，前者是o（n），后者是o（1）  </pre></td></tr><tr><td data-num="3"></td><td><pre>而对于大的数据量来说，反复的复杂度为n的操作是不够快的</pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly93d3cud2lraS13aWtpLnRvcC9iYWlrZS0lRTYlOTclQjYlRTklOTclQjQlRTUlQTQlOEQlRTYlOUQlODIlRTUlQkElQTY/d3Byb3Y9c3JwdzFfMA==">时间复杂度–中文维基百科</span></p>
-<h3 id="此操作线段树的复杂度就是决定性的原因"><a class="markdownIt-Anchor" href="#此操作线段树的复杂度就是决定性的原因">#</a> 此操作线段树的复杂度就是决定性的原因</h3>
-<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>线段树就是把两个操作都变成log n，而这就是这类问题要使用线段树的原因  </pre></td></tr><tr><td data-num="2"></td><td><pre>其实也不一定只能是线段树才能解决这个问题，只要是把累和变成各个区间和，区间和之间再各自又有和就行  </pre></td></tr><tr><td data-num="3"></td><td><pre>这样就可以做到快速得到和的同时又可以使修改一个数据的时候修改太多  </pre></td></tr><tr><td data-num="4"></td><td><pre>但想来想去其实就和线段树差不多，只是线段树是两两一组而已。</pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly93d3cud2lraS13aWtpLnRvcC93aWtpLyVFNyVCQSVCRiVFNiVBRSVCNSVFNiVBMCU5MQ==">线段树–中文维基百科</span></p>
-<h2 id="线段树的使用思路"><a class="markdownIt-Anchor" href="#线段树的使用思路">#</a> 线段树的使用思路</h2>
-<h3 id="先贴上维基百科上的示例代码"><a class="markdownIt-Anchor" href="#先贴上维基百科上的示例代码">#</a> 先贴上维基百科上的示例代码</h3>
-<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>下面的链接里有一些大致的讲解和源码  </pre></td></tr><tr><td data-num="2"></td><td><pre>看一下就好，代码不一定要写成那样，你自己的代码能好好的达到效果就OK</pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly93d3cud2lraS13aWtpLnRvcC9iYWlrZS0lRTclQkElQkYlRTYlQUUlQjUlRTYlQTAlOTFfKCVFNSU4QyVCQSVFOSU5NyVCNCVFNiU5RiVBNSVFOCVBRiVBMik=">线段树示例–中文维基百科</span></p>
-<h3 id="递归创建思路"><a class="markdownIt-Anchor" href="#递归创建思路">#</a> 递归创建思路</h3>
-<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>对于递归创建线段树，要创一个左到右的线段树，先创左到中，再创中到右  </pre></td></tr><tr><td data-num="2"></td><td><pre>递归边界就是左右相等，此时创建最底层的一个节点。</pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly93d3cud2lraS13aWtpLnRvcC93aWtpLyVFOSU4MCU5MiVFNSVCRCU5Mg==">递归–中文维基百科</span></p>
-<h3 id="迭代创建思路"><a class="markdownIt-Anchor" href="#迭代创建思路">#</a> 迭代创建思路</h3>
-<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>迭代的话，最主要的是要计算这个树最左下角那个节点在对应一维数组的下标  </pre></td></tr><tr><td data-num="2"></td><td><pre>这样要考虑的东西会变多，而也正是因为之前递归创建没有考虑到这些  </pre></td></tr><tr><td data-num="3"></td><td><pre>可能直接导致的问题就是开数组的时候只开了2n多一点点，导致wa </pre></td></tr><tr><td data-num="4"></td><td><pre>线段树具体需要多大取决于n能整除多少次2以及你具体创建树的方式  </pre></td></tr><tr><td data-num="5"></td><td><pre>最坏的情况需要4n大小，比如n是65，且你创建的树特别“完整”的时候</pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly93d3cud2lraS13aWtpLnRvcC93aWtpLyVFOCVCRiVBRCVFNCVCQiVBMw==">迭代–中文维基百科</span></p>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>只能整除自身和1，最小的质数是2。</pre></td></tr><tr><td data-num="2"></td><td><pre>比如若三个整数a，b，c，a*b<span class="token operator">=</span>c，问a b有多少种组合，就可以通过把c拆分成各个质数的乘积来解决。</pre></td></tr></table></figure><p>More info: <a href="">暂无</a></p>
+<h2 id="常规筛法"><a class="markdownIt-Anchor" href="#常规筛法">#</a> 常规筛法</h2>
+<h3 id="常用的判断n是否为质数的方法思路"><a class="markdownIt-Anchor" href="#常用的判断n是否为质数的方法思路">#</a> 常用的判断 n 是否为质数的方法思路</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h  </span></figcaption><table><tr><td data-num="1"></td><td><pre>for<span class="token punctuation">(</span>int i ； i*i <span class="token operator">&lt;</span> n <span class="token punctuation">;</span> i++<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token punctuation">&#123;</span> if（n%i<span class="token operator">==</span><span class="token number">0</span>）<span class="token punctuation">..</span><span class="token punctuation">..</span>.；<span class="token punctuation">&#125;</span> </pre></td></tr><tr><td data-num="3"></td><td><pre>显然复杂度是log n</pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly93d3cud2lraS13aWtpLnRvcC9iYWlrZS0lRTYlOTclQjYlRTklOTclQjQlRTUlQTQlOEQlRTYlOUQlODIlRTUlQkElQTY/d3Byb3Y9c3JwdzFfMA==">时间复杂度–中文维基百科</span></p>
+<h3 id="用此筛法筛从1到n的复杂度"><a class="markdownIt-Anchor" href="#用此筛法筛从1到n的复杂度">#</a> 用此筛法筛从 1 到 n 的复杂度</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>对某个数都是log n ， n 次 ， 复杂度是 n*log n；</pre></td></tr></table></figure><p>More info: <a href="">暂无</a></p>
+<h2 id="此筛法的使用思路"><a class="markdownIt-Anchor" href="#此筛法的使用思路">#</a> 此筛法的使用思路</h2>
+<h3 id="任何质数的整k倍都不是质数k为整且大于1"><a class="markdownIt-Anchor" href="#任何质数的整k倍都不是质数k为整且大于1">#</a> 任何质数的整 k 倍都不是质数（k 为整且大于 1）</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>对任意质数a，k*a都不是质数可以筛掉</pre></td></tr></table></figure><p>More info: <a href="">暂无</a></p>
+<h3 id="将a从2开始每次晒完范围内kaa变为下一个大于a的质数比如2后是33后是54被2那次筛掉不是质数"><a class="markdownIt-Anchor" href="#将a从2开始每次晒完范围内kaa变为下一个大于a的质数比如2后是33后是54被2那次筛掉不是质数">#</a> 将 a 从 2 开始，每次晒完范围内 k*a，a 变为下一个大于 a 的质数，比如 2 后是 3，3 后是 5（4 被 2 那次筛掉不是质数）</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>比如a先是2后是3，3后是5（4被2那次筛掉不是质数），5后是7（6被3筛），7后是11（8、10被2筛，9被3筛）</pre></td></tr></table></figure><p>More info: <a href="">暂无</a></p>
+<h3 id="时间复杂度分析"><a class="markdownIt-Anchor" href="#时间复杂度分析">#</a> 时间复杂度分析</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>对区间<span class="token punctuation">[</span><span class="token number">1</span>，n<span class="token punctuation">]</span>，每个元素要么是作为质数a被访问，要么被a*k筛去，时间复杂度是n</pre></td></tr></table></figure><p>More info: <a href="">暂无</a></p>
 
   </div>
 
@@ -176,7 +176,7 @@ YUME SEGAI = Darlin' 夢が叶ったの</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2021-03-03 20:07:22" itemprop="dateModified" datetime="2021-03-03T20:07:22+08:00">2021-03-03</time>
+    <time title="修改时间：2021-04-05 18:44:17" itemprop="dateModified" datetime="2021-04-05T18:44:17+08:00">2021-04-05</time>
   </span>
 </div>
 
@@ -202,7 +202,7 @@ YUME SEGAI = Darlin' 夢が叶ったの</title>
   </li>
   <li class="link">
     <strong>本文链接：</strong>
-    <a href="https://fzglch.github.io/2021/03/03/%E7%BA%BF%E6%AE%B5%E6%A0%91/" title="线段树">https://fzglch.github.io/2021/03/03/线段树/</a>
+    <a href="https://fzglch.github.io/2021/04/05/%E9%AB%98%E6%95%88%E7%AD%9B%E8%B4%A8%E6%95%B0/" title="高效筛质数">https://fzglch.github.io/2021/04/05/高效筛质数/</a>
   </li>
   <li class="license">
     <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -221,20 +221,20 @@ YUME SEGAI = Darlin' 夢が叶ったの</title>
     <div class="item left">
       
 
-  <a href="/2021/03/03/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giciryrr3rj20zk0m8nhk.jpg" title="最小生成树">
+  <a href="/2021/03/03/%E7%BF%BB%E5%94%B1%E6%AD%8C%E6%89%8BJonathan-Young%E7%AE%80%E4%BB%8B/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicivghyooj20zk0m8dir.jpg" title="翻唱歌手Jonathan Young简介">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>最小生成树</h3>
+  <h3>翻唱歌手Jonathan Young简介</h3>
   </a>
 
     </div>
     <div class="item right">
       
 
-  <a href="/2021/03/03/%E7%BF%BB%E5%94%B1%E6%AD%8C%E6%89%8BJonathan-Young%E7%AE%80%E4%BB%8B/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclx6phq6j20zk0m8e36.jpg" title="翻唱歌手Jonathan Young简介">
+  <a href="/2021/04/05/DFS%E5%92%8CBFS/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giciukx8a7j20zk0m8aio.jpg" title="DFS和BFS">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>翻唱歌手Jonathan Young简介</h3>
+  <h3>DFS和BFS</h3>
   </a>
 
     </div>
@@ -253,7 +253,7 @@ YUME SEGAI = Darlin' 夢が叶ったの</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%AA%E7%B1%BB%E9%97%AE%E9%A2%98%E6%98%AF%E7%BA%BF%E6%AE%B5%E6%A0%91%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text"> 哪类问题是线段树问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text"> 简介</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8%E7%BA%BF%E6%AE%B5%E6%A0%91"><span class="toc-number">2.</span> <span class="toc-text"> 为什么要用线段树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%99%AE%E9%80%9A%E6%95%B0%E7%BB%84%E4%B8%8E%E7%B4%AF%E7%A7%AF%E5%92%8C%E6%95%B0%E7%BB%84"><span class="toc-number">2.1.</span> <span class="toc-text"> 普通数组与累积和数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A4%E6%93%8D%E4%BD%9C%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%9A%84%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%B0%B1%E6%98%AF%E5%86%B3%E5%AE%9A%E6%80%A7%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-number">2.2.</span> <span class="toc-text"> 此操作线段树的复杂度就是决定性的原因</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%9A%84%E4%BD%BF%E7%94%A8%E6%80%9D%E8%B7%AF"><span class="toc-number">3.</span> <span class="toc-text"> 线段树的使用思路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%88%E8%B4%B4%E4%B8%8A%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91%E4%B8%8A%E7%9A%84%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81"><span class="toc-number">3.1.</span> <span class="toc-text"> 先贴上维基百科上的示例代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E5%88%9B%E5%BB%BA%E6%80%9D%E8%B7%AF"><span class="toc-number">3.2.</span> <span class="toc-text"> 递归创建思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%88%9B%E5%BB%BA%E6%80%9D%E8%B7%AF"><span class="toc-number">3.3.</span> <span class="toc-text"> 迭代创建思路</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%A8%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text"> 质数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text"> 简介</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%84%E7%AD%9B%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text"> 常规筛法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E5%88%A4%E6%96%ADn%E6%98%AF%E5%90%A6%E4%B8%BA%E8%B4%A8%E6%95%B0%E7%9A%84%E6%96%B9%E6%B3%95%E6%80%9D%E8%B7%AF"><span class="toc-number">2.1.</span> <span class="toc-text"> 常用的判断 n 是否为质数的方法思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%AD%A4%E7%AD%9B%E6%B3%95%E7%AD%9B%E4%BB%8E1%E5%88%B0n%E7%9A%84%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">2.2.</span> <span class="toc-text"> 用此筛法筛从 1 到 n 的复杂度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A4%E7%AD%9B%E6%B3%95%E7%9A%84%E4%BD%BF%E7%94%A8%E6%80%9D%E8%B7%AF"><span class="toc-number">3.</span> <span class="toc-text"> 此筛法的使用思路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%BB%E4%BD%95%E8%B4%A8%E6%95%B0%E7%9A%84%E6%95%B4k%E5%80%8D%E9%83%BD%E4%B8%8D%E6%98%AF%E8%B4%A8%E6%95%B0k%E4%B8%BA%E6%95%B4%E4%B8%94%E5%A4%A7%E4%BA%8E1"><span class="toc-number">3.1.</span> <span class="toc-text"> 任何质数的整 k 倍都不是质数（k 为整且大于 1）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%86a%E4%BB%8E2%E5%BC%80%E5%A7%8B%E6%AF%8F%E6%AC%A1%E6%99%92%E5%AE%8C%E8%8C%83%E5%9B%B4%E5%86%85kaa%E5%8F%98%E4%B8%BA%E4%B8%8B%E4%B8%80%E4%B8%AA%E5%A4%A7%E4%BA%8Ea%E7%9A%84%E8%B4%A8%E6%95%B0%E6%AF%94%E5%A6%822%E5%90%8E%E6%98%AF33%E5%90%8E%E6%98%AF54%E8%A2%AB2%E9%82%A3%E6%AC%A1%E7%AD%9B%E6%8E%89%E4%B8%8D%E6%98%AF%E8%B4%A8%E6%95%B0"><span class="toc-number">3.2.</span> <span class="toc-text"> 将 a 从 2 开始，每次晒完范围内 k*a，a 变为下一个大于 a 的质数，比如 2 后是 3，3 后是 5（4 被 2 那次筛掉不是质数）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90"><span class="toc-number">3.3.</span> <span class="toc-text"> 时间复杂度分析</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
       </div>
@@ -299,12 +299,12 @@ YUME SEGAI = Darlin' 夢が叶ったの</title>
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/2021/03/03/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+        <a href="/2021/03/03/%E7%BF%BB%E5%94%B1%E6%AD%8C%E6%89%8BJonathan-Young%E7%AE%80%E4%BB%8B/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="/2021/03/03/%E7%BF%BB%E5%94%B1%E6%AD%8C%E6%89%8BJonathan-Young%E7%AE%80%E4%BB%8B/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+        <a href="/2021/04/05/DFS%E5%92%8CBFS/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -322,33 +322,6 @@ YUME SEGAI = Darlin' 夢が叶ったの</title>
 <div class="rpost pjax">
   <h2>随机文章</h2>
   <ul>
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/04/05/DFS%E5%92%8CBFS/" title="DFS和BFS">DFS和BFS</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/03/03/%E7%BA%BF%E6%AE%B5%E6%A0%91/" title="线段树">线段树</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/03/03/%E7%BF%BB%E5%94%B1%E6%AD%8C%E6%89%8BJonathan-Young%E7%AE%80%E4%BB%8B/" title="翻唱歌手Jonathan Young简介">翻唱歌手Jonathan Young简介</a></span>
-  </li>
-
       
   <li class="item">
     
@@ -373,7 +346,34 @@ YUME SEGAI = Darlin' 夢が叶ったの</title>
 <div class="breadcrumb">
 </div>
 
+    <span><a href="/2021/03/03/%E7%BF%BB%E5%94%B1%E6%AD%8C%E6%89%8BJonathan-Young%E7%AE%80%E4%BB%8B/" title="翻唱歌手Jonathan Young简介">翻唱歌手Jonathan Young简介</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/04/05/DFS%E5%92%8CBFS/" title="DFS和BFS">DFS和BFS</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
     <span><a href="/2021/03/03/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" title="最小生成树">最小生成树</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/03/03/%E7%BA%BF%E6%AE%B5%E6%A0%91/" title="线段树">线段树</a></span>
   </li>
 
   </ul>
@@ -404,7 +404,7 @@ YUME SEGAI = Darlin' 夢が叶ったの</title>
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: '2021/03/03/线段树/',
+    path: '2021/04/05/高效筛质数/',
     favicon: {
       show: "（●´3｀●）やれやれだぜ",
       hide: "(´Д｀)大変だ！"
