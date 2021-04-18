@@ -5,9 +5,9 @@
     <link href="https://fzglch.github.io" />
     <updated>2021-04-18T10:35:36.000Z</updated>
     <entry>
-        <id>https://fzglch.github.io/2021/04/18/%E5%93%88%E5%AF%86%E5%B0%94%E9%A1%BF%E5%9B%9E%E8%B7%AF%E4%B8%8E%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/</id>
-        <title>哈密尔顿回路与欧拉回路</title>
-        <link rel="alternate" href="https://fzglch.github.io/2021/04/18/%E5%93%88%E5%AF%86%E5%B0%94%E9%A1%BF%E5%9B%9E%E8%B7%AF%E4%B8%8E%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/"/>
+        <id>https://fzglch.github.io/2021/04/18/%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF%E4%B8%8E%E5%93%88%E5%AF%86%E5%B0%94%E9%A1%BF%E5%9B%9E%E8%B7%AF/</id>
+        <title>欧拉回路与哈密尔顿回路与欧拉回路</title>
+        <link rel="alternate" href="https://fzglch.github.io/2021/04/18/%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF%E4%B8%8E%E5%93%88%E5%AF%86%E5%B0%94%E9%A1%BF%E5%9B%9E%E8%B7%AF/"/>
         <content type="html">&lt;p&gt;这篇文章主要是讲的哈密尔顿回路与欧拉回路的问题，属于图论&lt;/p&gt;
 &lt;h2 id=&#34;欧拉回路&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#欧拉回路&#34;&gt;#&lt;/a&gt; 欧拉回路&lt;/h2&gt;
 &lt;h3 id=&#34;简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h3&gt;
