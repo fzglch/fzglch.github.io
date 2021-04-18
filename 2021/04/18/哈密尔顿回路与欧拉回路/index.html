@@ -1,0 +1,442 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Darlin' 夢が叶ったの" href="https://fzglch.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Darlin' 夢が叶ったの" href="https://fzglch.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Darlin' 夢が叶ったの" href="https://fzglch.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="https://fzglch.github.io/2021/04/18/%E5%93%88%E5%AF%86%E5%B0%94%E9%A1%BF%E5%9B%9E%E8%B7%AF%E4%B8%8E%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/">
+
+
+
+  <title>
+哈密尔顿回路与欧拉回路 |
+YUME SEGAI = Darlin' 夢が叶ったの</title>
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">哈密尔顿回路与欧拉回路
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2021-04-18 18:35:36">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2021-04-18T18:35:36+08:00">2021-04-18</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">YUME SEGAI</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicitspjpbj20zk0m81ky.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giph4wqtg4j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipev1x5e4j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicm0n457cj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipeyhsblkj20zk0m81kx.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://fzglch.github.io/2021/04/18/%E5%93%88%E5%AF%86%E5%B0%94%E9%A1%BF%E5%9B%9E%E8%B7%AF%E4%B8%8E%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/try.gif">
+    <meta itemprop="name" content="TKOMW彡">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Darlin' 夢が叶ったの">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>这篇文章主要是讲的哈密尔顿回路与欧拉回路的问题，属于图论</p>
+<h2 id="欧拉回路"><a class="markdownIt-Anchor" href="#欧拉回路">#</a> 欧拉回路</h2>
+<h3 id="简介"><a class="markdownIt-Anchor" href="#简介">#</a> 简介</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>一个图如果从某个点一笔画完，并且每个边只经过一次，最终回到起点，那么这条路径便是这个图的欧拉回路</pre></td></tr><tr><td data-num="2"></td><td><pre>根据图自身的情况，欧拉回路可能不唯一，也可能不存在</pre></td></tr></table></figure><p>More info: <a href="">暂无</a></p>
+<h2 id="欧拉回路的算法思想"><a class="markdownIt-Anchor" href="#欧拉回路的算法思想">#</a> 欧拉回路的算法思想</h2>
+<h3 id="对于无向图"><a class="markdownIt-Anchor" href="#对于无向图">#</a> 对于无向图</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h  </span></figcaption><table><tr><td data-num="1"></td><td><pre>其存在的充要条件为：</pre></td></tr><tr><td data-num="2"></td><td><pre>G为连通图，并且G仅有两个奇度结点（度数为奇数的顶点）或者无奇度结点。</pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre>并且可以得到：</pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token number">1</span><span class="token punctuation">)</span> 当G是仅有两个奇度结点的连通图时，G的欧拉通路必以此两个结点为端点。</pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token number">2</span><span class="token punctuation">)</span> 当G是无奇度结点的连通图时，G必有欧拉回路。</pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token number">3</span><span class="token punctuation">)</span> G为欧拉图（存在欧拉回路）的充分必要条件是G为无奇度结点的连通图。</pre></td></tr></table></figure><p>More info: <a href="">暂无</a></p>
+<h3 id="对于有向图"><a class="markdownIt-Anchor" href="#对于有向图">#</a> 对于有向图</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>其存在的充要条件为：</pre></td></tr><tr><td data-num="2"></td><td><pre>D为有向图，D的基图连通，并且所有顶点的出度与入度都相等；或者除两个顶点外，其余顶点的出度与入度都相等，而这两个顶点中一个顶点的出度与入度之差为1，另一个顶点的出度与入度之差为-1。</pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre>并且可以得到：</pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token number">1</span><span class="token punctuation">)</span> 当D除出、入度之差为1，-1的两个顶点之外，其余顶点的出度与入度都相等时，D的有向欧拉通路必以出、入度之差为1的顶点作为始点，以出、入度之差为-1的顶点作为终点。</pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token number">2</span><span class="token punctuation">)</span> 当D的所有顶点的出、入度都相等时，D中存在有向欧拉回路。</pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token number">3</span><span class="token punctuation">)</span> 有向图D为有向欧拉图的充分必要条件是D的基图为连通图，并且所有顶点的出、入度都相等。</pre></td></tr></table></figure><p>More info: <a href="">暂无</a></p>
+<h2 id="哈密尔顿回路"><a class="markdownIt-Anchor" href="#哈密尔顿回路">#</a> 哈密尔顿回路</h2>
+<h3 id="简介-2"><a class="markdownIt-Anchor" href="#简介-2">#</a> 简介</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>如果从一个点出发，经过每个点各一次且回到出发点，那么这个路径就称为这个图的哈密尔顿回路</pre></td></tr><tr><td data-num="2"></td><td><pre>同样，根据图自身的情况，哈密尔顿回路可能不唯一，也可能不存在</pre></td></tr></table></figure><p>More info: <a href="">暂无</a></p>
+<h3 id="算法思想"><a class="markdownIt-Anchor" href="#算法思想">#</a> 算法思想</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>哈密尔顿回路与欧拉回路不同，没有很好的充要条件来帮助解决问题</pre></td></tr><tr><td data-num="2"></td><td><pre>故采用一般图的遍历方式，DFS或BFS</pre></td></tr><tr><td data-num="3"></td><td><pre>而BFS更适合找最短路径，DFS则能更好的一条路遍历到底</pre></td></tr><tr><td data-num="4"></td><td><pre>故哈密尔顿问题不适合BFS，适合用DFS</pre></td></tr></table></figure><p>More info: <a href="https://fzglch.github.io/2021/04/05/DFS%E5%92%8CBFS/">另一篇关于 DFS 和 BFS 的文章</a></p>
+<h3 id="求解过程"><a class="markdownIt-Anchor" href="#求解过程">#</a> 求解过程</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>用DFS遍历图，当所有的点被访问判断此点是否有直接回到起点的边，有则是哈密尔顿回路</pre></td></tr></table></figure><p>More info: <a href="">暂无</a></p>
+<h3 id="示例"><a class="markdownIt-Anchor" href="#示例">#</a> 示例</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>此问题是一个简单的图形，输入的是起点，最后输出的是从起点出发存在的哈密尔顿的总个数</pre></td></tr><tr><td data-num="2"></td><td><pre>中间输出的，是DFS的过程</pre></td></tr><tr><td data-num="3"></td><td><pre>边的关系和点的个数可以修改</pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre></pre></td></tr><tr><td data-num="6"></td><td><pre></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token comment">#include&lt;cstdio></span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token comment">#include&lt;cstring></span></pre></td></tr><tr><td data-num="9"></td><td><pre>const int pointNum <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="10"></td><td><pre>bool isVisited<span class="token punctuation">[</span>pointNum<span class="token punctuation">]</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>bool edges<span class="token punctuation">[</span>pointNum<span class="token punctuation">]</span><span class="token punctuation">[</span>pointNum<span class="token punctuation">]</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>int result<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="13"></td><td><pre>int visitedNum<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="14"></td><td><pre>int input<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="15"></td><td><pre></pre></td></tr><tr><td data-num="16"></td><td><pre>void <span class="token function-name function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="17"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="18"></td><td><pre>	memset<span class="token punctuation">(</span>edges, sizeof<span class="token punctuation">(</span>edges<span class="token punctuation">)</span>, <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="19"></td><td><pre>	memset<span class="token punctuation">(</span>isVisited, sizeof<span class="token punctuation">(</span>isVisited<span class="token punctuation">)</span>, <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="20"></td><td><pre>	result <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="21"></td><td><pre>	visitedNum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="22"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="23"></td><td><pre></pre></td></tr><tr><td data-num="24"></td><td><pre>void setEdge<span class="token punctuation">(</span>int a, int b<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="25"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="26"></td><td><pre>	edges<span class="token punctuation">[</span>a<span class="token punctuation">]</span><span class="token punctuation">[</span>b<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span> edges<span class="token punctuation">[</span>b<span class="token punctuation">]</span><span class="token punctuation">[</span>a<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="27"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="28"></td><td><pre></pre></td></tr><tr><td data-num="29"></td><td><pre>void <span class="token function-name function">setEdges</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="30"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="31"></td><td><pre>	setEdge<span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="32"></td><td><pre>	setEdge<span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="33"></td><td><pre>	setEdge<span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="34"></td><td><pre>	setEdge<span class="token punctuation">(</span><span class="token number">1</span>, <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="35"></td><td><pre>	setEdge<span class="token punctuation">(</span><span class="token number">1</span>, <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="36"></td><td><pre>	setEdge<span class="token punctuation">(</span><span class="token number">2</span>, <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="37"></td><td><pre>	setEdge<span class="token punctuation">(</span><span class="token number">2</span>, <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="38"></td><td><pre>	setEdge<span class="token punctuation">(</span><span class="token number">3</span>, <span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="39"></td><td><pre>	setEdge<span class="token punctuation">(</span><span class="token number">4</span>, <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="40"></td><td><pre>	setEdge<span class="token punctuation">(</span><span class="token number">4</span>, <span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="41"></td><td><pre>	setEdge<span class="token punctuation">(</span><span class="token number">5</span>, <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="42"></td><td><pre>	setEdge<span class="token punctuation">(</span><span class="token number">6</span>, <span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="43"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="44"></td><td><pre></pre></td></tr><tr><td data-num="45"></td><td><pre></pre></td></tr><tr><td data-num="46"></td><td><pre></pre></td></tr><tr><td data-num="47"></td><td><pre>void dfs<span class="token punctuation">(</span>int start<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="48"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="49"></td><td><pre>	<span class="token keyword">if</span> <span class="token punctuation">(</span>visitedNum <span class="token operator">==</span> pointNum<span class="token punctuation">)</span>//先检验是否到边界</pre></td></tr><tr><td data-num="50"></td><td><pre>	<span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="51"></td><td><pre>		//相关操作；</pre></td></tr><tr><td data-num="52"></td><td><pre>		<span class="token keyword">if</span> <span class="token punctuation">(</span>edges<span class="token punctuation">[</span>start<span class="token punctuation">]</span><span class="token punctuation">[</span>input<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="53"></td><td><pre>		<span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="54"></td><td><pre>			result++<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="55"></td><td><pre>			printf<span class="token punctuation">(</span><span class="token string">"OK"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="56"></td><td><pre>		<span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="57"></td><td><pre>		//return<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="58"></td><td><pre>		printf<span class="token punctuation">(</span><span class="token string">"<span class="token entity" title="\n">\n</span>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="59"></td><td><pre>		<span class="token builtin class-name">return</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="60"></td><td><pre>	<span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="61"></td><td><pre>	<span class="token keyword">for</span> <span class="token punctuation">(</span>int i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> pointNum<span class="token punctuation">;</span> i++<span class="token punctuation">)</span>//尝试每一种可能</pre></td></tr><tr><td data-num="62"></td><td><pre>	<span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="63"></td><td><pre>		//添加标志；</pre></td></tr><tr><td data-num="64"></td><td><pre>		//dfs（start + <span class="token number">1</span>）<span class="token punctuation">;</span>//递归</pre></td></tr><tr><td data-num="65"></td><td><pre>		//删除标志；</pre></td></tr><tr><td data-num="66"></td><td><pre>		<span class="token keyword">if</span> <span class="token punctuation">(</span>edges<span class="token punctuation">[</span>start<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">1</span> <span class="token operator">&amp;&amp;</span> isVisited<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token boolean">false</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="67"></td><td><pre>		<span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="68"></td><td><pre>			isVisited<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="69"></td><td><pre>			printf<span class="token punctuation">(</span><span class="token string">"%d,"</span>, i<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="70"></td><td><pre>			visitedNum++<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="71"></td><td><pre>			dfs<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="72"></td><td><pre>			isVisited<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="73"></td><td><pre>			printf<span class="token punctuation">(</span><span class="token string">"从%d离开,"</span>, i<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="74"></td><td><pre>			visitedNum--<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="75"></td><td><pre>		<span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="76"></td><td><pre>	<span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="77"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="78"></td><td><pre></pre></td></tr><tr><td data-num="79"></td><td><pre></pre></td></tr><tr><td data-num="80"></td><td><pre>int <span class="token function-name function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="81"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="82"></td><td><pre>	init<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="83"></td><td><pre>	setEdges<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="84"></td><td><pre>	scanf<span class="token punctuation">(</span><span class="token string">"%d"</span>, <span class="token operator">&amp;</span>input<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="85"></td><td><pre>	<span class="token keyword">if</span> <span class="token punctuation">(</span>input <span class="token operator">></span><span class="token operator">=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> input <span class="token operator">&lt;</span> pointNum<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="86"></td><td><pre>	<span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="87"></td><td><pre>		isVisited<span class="token punctuation">[</span>input<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="88"></td><td><pre>		visitedNum++<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="89"></td><td><pre>		dfs<span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="90"></td><td><pre>		printf<span class="token punctuation">(</span><span class="token string">"<span class="token entity" title="\n">\n</span>结果是%d<span class="token entity" title="\n">\n</span>"</span>, result<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="91"></td><td><pre>	<span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="92"></td><td><pre>	<span class="token keyword">else</span>  printf<span class="token punctuation">(</span><span class="token string">"超出范围"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="93"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p>More info: <a href="">暂无</a></p>
+<h3 id="性能分析"><a class="markdownIt-Anchor" href="#性能分析">#</a> 性能分析</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>由于DFS是暴力的把所有情况一个不漏的全部跑一遍来找出所有可能的情况，所以复杂度上体现出来的自然是暴力的</pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre>具体对于一条边，其下可能的所有走法都得乘起来，而这些边其下的走法也都得乘起来</pre></td></tr><tr><td data-num="4"></td><td><pre>根据边的个数和图连接的复杂程度不尽相同</pre></td></tr></table></figure><p>More info: <a href="">暂无</a></p>
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-04-18 18:59:07" itemprop="dateModified" datetime="2021-04-18T18:59:07+08:00">2021-04-18</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="TKOMW彡 微信支付">
+        <p>微信支付</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>TKOMW彡： </strong>TKOMW彡 <i class="ic i-at"><em>@</em></i>Darlin' 夢が叶ったの
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://fzglch.github.io/2021/04/18/%E5%93%88%E5%AF%86%E5%B0%94%E9%A1%BF%E5%9B%9E%E8%B7%AF%E4%B8%8E%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/" title="哈密尔顿回路与欧拉回路">https://fzglch.github.io/2021/04/18/哈密尔顿回路与欧拉回路/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2021/04/05/DFS%E5%92%8CBFS/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclffsa1cj20zk0m811l.jpg" title="DFS和BFS">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>DFS和BFS</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF"><span class="toc-number">1.</span> <span class="toc-text"> 欧拉回路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text"> 简介</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF%E7%9A%84%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3"><span class="toc-number">2.</span> <span class="toc-text"> 欧拉回路的算法思想</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E4%BA%8E%E6%97%A0%E5%90%91%E5%9B%BE"><span class="toc-number">2.1.</span> <span class="toc-text"> 对于无向图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E4%BA%8E%E6%9C%89%E5%90%91%E5%9B%BE"><span class="toc-number">2.2.</span> <span class="toc-text"> 对于有向图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%88%E5%AF%86%E5%B0%94%E9%A1%BF%E5%9B%9E%E8%B7%AF"><span class="toc-number">3.</span> <span class="toc-text"> 哈密尔顿回路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B-2"><span class="toc-number">3.1.</span> <span class="toc-text"> 简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3"><span class="toc-number">3.2.</span> <span class="toc-text"> 算法思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B1%82%E8%A7%A3%E8%BF%87%E7%A8%8B"><span class="toc-number">3.3.</span> <span class="toc-text"> 求解过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number">3.4.</span> <span class="toc-text"> 示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90"><span class="toc-number">3.5.</span> <span class="toc-text"> 性能分析</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="TKOMW彡"
+      data-src="/images/try.gif">
+  <p class="name" itemprop="name">TKOMW彡</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">7</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lvdXJuYW1l" title="https:&#x2F;&#x2F;github.com&#x2F;yourname"><i class="ic i-github"></i></span>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;twitter.com&#x2F;yourname"><i class="ic i-twitter"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;yourname"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPXlvdXJpZA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;yourid"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20veW91cm5hbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;yourname"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/04/05/%E9%AB%98%E6%95%88%E7%AD%9B%E8%B4%A8%E6%95%B0/" title="高效筛质数">高效筛质数</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/03/03/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" title="最小生成树">最小生成树</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/04/05/DFS%E5%92%8CBFS/" title="DFS和BFS">DFS和BFS</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/03/03/%E7%BA%BF%E6%AE%B5%E6%A0%91/" title="线段树">线段树</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/04/18/%E5%93%88%E5%AF%86%E5%B0%94%E9%A1%BF%E5%9B%9E%E8%B7%AF%E4%B8%8E%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/" title="哈密尔顿回路与欧拉回路">哈密尔顿回路与欧拉回路</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/03/03/%E7%BF%BB%E5%94%B1%E6%AD%8C%E6%89%8BJonathan-Young%E7%AE%80%E4%BB%8B/" title="翻唱歌手Jonathan Young简介">翻唱歌手Jonathan Young简介</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/01/31/hello-world/" title="~哈喽喽~">~哈喽喽~</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">TKOMW彡 @ YUME SEGAI</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2021/04/18/哈密尔顿回路与欧拉回路/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right:30","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+</html>
