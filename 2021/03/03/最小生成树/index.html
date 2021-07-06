@@ -100,12 +100,12 @@ YUME SEGAI = Darlin' 夢が叶ったの</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipesx5fdwj20zk0m81kx.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giciusoyjnj219g0u0x56.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclhpw3lwj20zk0m8gvw.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicitf0kl1j20zk0m87fe.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giciukx8a7j20zk0m8aio.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipexoj0moj20zk0m8kgu.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclil3m4ej20zk0m8tn8.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicliierfjj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicliwyw55j20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4lm9i7j20zk0m84qp.jpg"></li>
         </ul>
       </div>
     </header>
@@ -162,7 +162,7 @@ YUME SEGAI = Darlin' 夢が叶ったの</title>
 <h3 id="本质上都是贪心算法"><a class="markdownIt-Anchor" href="#本质上都是贪心算法">#</a> 本质上都是贪心算法</h3>
 <figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>最小生成树的两种算法思想，一个是把边排序，依次选，一个是由点出发，选小权重的边，两个本质上其实都是贪心的思想，并且是保证正确的  </pre></td></tr><tr><td data-num="2"></td><td><pre>两者的关键点都在于每次选边要检验是不是会导致成环，《算法导论》里就是指安全边</pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly93d3cud2lraS13aWtpLnRvcC93aWtpLyVFOCVCNCVBQSVFNSVCRiU4MyVFNyVBRSU5NyVFNiVCMyU5NQ==">贪心算法–中文维基百科</span></p>
 <h3 id="使用思路"><a class="markdownIt-Anchor" href="#使用思路">#</a> 使用思路</h3>
-<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>体现在代码上，最难的部分就是并查集，使用最小生成只需要写好并查集然后简单模拟一下K算法或者P算法就OK</pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly93d3cud2lraS13aWtpLnRvcC93aWtpLyVFNSVCOSVCNiVFNiU5RiVBNSVFOSU5QiU4Ng==">并查集–中文维基百科</span></p>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>体现在代码上，最难的部分就是并查集，使用最小生成只需要模拟一下K算法或者P算法就OK</pre></td></tr><tr><td data-num="2"></td><td><pre>值得一提的是，写起来p算法更简单，因为k算法需要并查集</pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly93d3cud2lraS13aWtpLnRvcC93aWtpLyVFNSVCOSVCNiVFNiU5RiVBNSVFOSU5QiU4Ng==">并查集–中文维基百科</span></p>
 <h2 id="示例"><a class="markdownIt-Anchor" href="#示例">#</a> 示例</h2>
 <h3 id="源码"><a class="markdownIt-Anchor" href="#源码">#</a> 源码</h3>
 <figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment">#include&lt;iostream></span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token comment">#include&lt;algorithm></span></pre></td></tr><tr><td data-num="3"></td><td><pre>using namespace std<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre>const int N <span class="token operator">=</span> <span class="token number">26</span> <span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre>int f<span class="token punctuation">[</span>N+1<span class="token punctuation">]</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre></pre></td></tr><tr><td data-num="8"></td><td><pre>void UFInit <span class="token punctuation">(</span>int n<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="10"></td><td><pre>	for<span class="token punctuation">(</span>int i <span class="token operator">=</span> <span class="token number">1</span> <span class="token punctuation">;</span> i<span class="token operator">&lt;</span><span class="token operator">=</span>N <span class="token punctuation">;</span> i++<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="11"></td><td><pre>	<span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>		f<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span>i<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="13"></td><td><pre>	<span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="15"></td><td><pre></pre></td></tr><tr><td data-num="16"></td><td><pre>int Find<span class="token punctuation">(</span>int a<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="17"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="18"></td><td><pre>	<span class="token builtin class-name">return</span> <span class="token assign-left variable">a</span><span class="token operator">==</span>f<span class="token punctuation">(</span>a<span class="token punctuation">)</span> ? a <span class="token builtin class-name">:</span> Find <span class="token punctuation">(</span> f<span class="token punctuation">[</span>a<span class="token punctuation">]</span> <span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="19"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="20"></td><td><pre></pre></td></tr><tr><td data-num="21"></td><td><pre>bool Union <span class="token punctuation">(</span>int a , int b<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="22"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="23"></td><td><pre>	<span class="token assign-left variable">a</span><span class="token operator">=</span>Find<span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="24"></td><td><pre>	<span class="token assign-left variable">b</span><span class="token operator">=</span>Find<span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="25"></td><td><pre>	if<span class="token punctuation">(</span>a<span class="token operator">!=</span>b<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="26"></td><td><pre>	<span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="27"></td><td><pre>		f<span class="token punctuation">[</span>a<span class="token punctuation">]</span><span class="token operator">=</span>b<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="28"></td><td><pre>		<span class="token builtin class-name">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="29"></td><td><pre>	<span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="30"></td><td><pre>	<span class="token keyword">else</span> <span class="token builtin class-name">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="31"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="32"></td><td><pre></pre></td></tr><tr><td data-num="33"></td><td><pre>struct Edge</pre></td></tr><tr><td data-num="34"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="35"></td><td><pre>	int u,v,w<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="36"></td><td><pre><span class="token punctuation">&#125;</span>edges<span class="token punctuation">[</span>N*<span class="token punctuation">(</span>N-1<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="37"></td><td><pre></pre></td></tr><tr><td data-num="38"></td><td><pre>bool cmp<span class="token punctuation">(</span>Edge a , Edge b<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="39"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="40"></td><td><pre>	<span class="token builtin class-name">return</span> a.w<span class="token operator">&lt;</span>b.w<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="41"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="42"></td><td><pre></pre></td></tr><tr><td data-num="43"></td><td><pre>int <span class="token function-name function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="44"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="45"></td><td><pre>	int n,k,m<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="46"></td><td><pre>	int cnt2<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="47"></td><td><pre>	char start,end<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="48"></td><td><pre>	while<span class="token punctuation">(</span>cin<span class="token operator">>></span>n <span class="token operator">&amp;&amp;</span> n<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="49"></td><td><pre>	<span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="50"></td><td><pre>		UFInit<span class="token punctuation">(</span>N<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="51"></td><td><pre>		<span class="token assign-left variable">cnt2</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="52"></td><td><pre>		for<span class="token punctuation">(</span>int i <span class="token operator">=</span> <span class="token number">0</span> <span class="token punctuation">;</span> i<span class="token operator">&lt;</span>n-1 <span class="token punctuation">;</span> i++<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="53"></td><td><pre>		<span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="54"></td><td><pre>			cin<span class="token operator">>></span>start<span class="token operator">>></span>k<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="55"></td><td><pre>			for<span class="token punctuation">(</span>int j <span class="token operator">=</span> <span class="token number">0</span> <span class="token punctuation">;</span> j<span class="token operator">&lt;</span>k <span class="token punctuation">;</span> j++<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="56"></td><td><pre>			<span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="57"></td><td><pre>				cin<span class="token operator">>></span>end<span class="token operator">>></span>m<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="58"></td><td><pre>				edges<span class="token punctuation">[</span>cnt2<span class="token punctuation">]</span>.u<span class="token operator">=</span>start - <span class="token string">'A'</span> +1<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="59"></td><td><pre>				edges<span class="token punctuation">[</span>cnt2<span class="token punctuation">]</span>.v<span class="token operator">=</span>end - <span class="token string">'A'</span> +1<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="60"></td><td><pre>				edges<span class="token punctuation">[</span>cnt2++<span class="token punctuation">]</span>.w<span class="token operator">=</span>m<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="61"></td><td><pre>			<span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="62"></td><td><pre>		<span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="63"></td><td><pre>		int ans <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="64"></td><td><pre>		sort<span class="token punctuation">(</span>edges,edges+cnt2,cmp<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="65"></td><td><pre>		for<span class="token punctuation">(</span>int i <span class="token operator">=</span> <span class="token number">0</span> <span class="token punctuation">;</span> i<span class="token operator">&lt;</span>cnt2 <span class="token punctuation">;</span> i++<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="66"></td><td><pre>		<span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="67"></td><td><pre>			if<span class="token punctuation">(</span>Union<span class="token punctuation">(</span>edges<span class="token punctuation">[</span>i<span class="token punctuation">]</span>.u,edges<span class="token punctuation">[</span>i<span class="token punctuation">]</span>.v<span class="token punctuation">)</span> <span class="token punctuation">)</span></pre></td></tr><tr><td data-num="68"></td><td><pre>			<span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="69"></td><td><pre>				<span class="token assign-left variable">ans</span><span class="token operator">+=</span>edges<span class="token punctuation">[</span>i<span class="token punctuation">]</span>.w<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="70"></td><td><pre>			<span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="71"></td><td><pre>		<span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="72"></td><td><pre>		cout<span class="token operator">&lt;&lt;</span>ans<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="73"></td><td><pre>	<span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="74"></td><td><pre>	<span class="token builtin class-name">return</span> <span class="token number">0</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="75"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly92anVkZ2UubmV0L2NvbnRlc3QvNDIxMDUwI3Byb2JsZW0vQQ==">对应题目链接</span></p>
@@ -177,7 +177,7 @@ YUME SEGAI = Darlin' 夢が叶ったの</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2021-05-19 11:48:18" itemprop="dateModified" datetime="2021-05-19T11:48:18+08:00">2021-05-19</time>
+    <time title="修改时间：2021-07-03 20:27:53" itemprop="dateModified" datetime="2021-07-03T20:27:53+08:00">2021-07-03</time>
   </span>
 </div>
 
@@ -222,7 +222,7 @@ YUME SEGAI = Darlin' 夢が叶ったの</title>
     <div class="item left">
       
 
-  <a href="/2021/01/31/hello-world/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclx29mstj20zk0m8hdt.jpg" title="~哈喽喽~">
+  <a href="/2021/01/31/hello-world/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclwuom7cj20zk0m8dvn.jpg" title="~哈喽喽~">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>~哈喽喽~</h3>
@@ -232,7 +232,7 @@ YUME SEGAI = Darlin' 夢が叶ったの</title>
     <div class="item right">
       
 
-  <a href="/2021/03/03/%E7%BA%BF%E6%AE%B5%E6%A0%91/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giph4lm9i7j20zk0m84qp.jpg" title="线段树">
+  <a href="/2021/03/03/%E7%BA%BF%E6%AE%B5%E6%A0%91/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipex2cdtbj20zk0m8x6p.jpg" title="线段树">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>线段树</h3>
@@ -269,7 +269,7 @@ YUME SEGAI = Darlin' 夢が叶ったの</title>
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">13</span>
+        <span class="count">15</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -329,52 +329,7 @@ YUME SEGAI = Darlin' 夢が叶ったの</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/04/05/DFS%E5%92%8CBFS/" title="DFS和BFS">DFS和BFS</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/03/03/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" title="最小生成树">最小生成树</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/05/28/106div2/" title="106div2">106div2</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/03/03/%E7%BF%BB%E5%94%B1%E6%AD%8C%E6%89%8BJonathan-Young%E7%AE%80%E4%BB%8B/" title="翻唱歌手Jonathan Young简介">翻唱歌手Jonathan Young简介</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/05/28/722div2/" title="#722div2">#722div2</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/05/16/Top-K/" title="Top K">Top K</a></span>
+    <span><a href="/2021/07/06/day-2/" title="day 2">day 2</a></span>
   </li>
 
       
@@ -401,6 +356,24 @@ YUME SEGAI = Darlin' 夢が叶ったの</title>
 <div class="breadcrumb">
 </div>
 
+    <span><a href="/2021/04/05/DFS%E5%92%8CBFS/" title="DFS和BFS">DFS和BFS</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/03/03/%E7%BF%BB%E5%94%B1%E6%AD%8C%E6%89%8BJonathan-Young%E7%AE%80%E4%BB%8B/" title="翻唱歌手Jonathan Young简介">翻唱歌手Jonathan Young简介</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
     <span><a href="/2021/04/05/%E9%AB%98%E6%95%88%E7%AD%9B%E8%B4%A8%E6%95%B0/" title="高效筛质数">高效筛质数</a></span>
   </li>
 
@@ -410,7 +383,34 @@ YUME SEGAI = Darlin' 夢が叶ったの</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/05/11/%E5%9B%BE%E5%AE%9E%E9%AA%8C/" title="图实验">图实验</a></span>
+    <span><a href="/2021/05/28/722div2/" title="#722div2">#722div2</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/01/31/hello-world/" title="~哈喽喽~">~哈喽喽~</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/03/03/%E7%BA%BF%E6%AE%B5%E6%A0%91/" title="线段树">线段树</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/04/18/%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF%E4%B8%8E%E5%93%88%E5%AF%86%E5%B0%94%E9%A1%BF%E5%9B%9E%E8%B7%AF/" title="欧拉回路与哈密尔顿回路与欧拉回路">欧拉回路与哈密尔顿回路与欧拉回路</a></span>
   </li>
 
   </ul>
