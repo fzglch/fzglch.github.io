@@ -3,7 +3,78 @@
     <id>https://fzglch.github.io</id>
     <title>Darlin&#39; 夢が叶ったの</title>
     <link href="https://fzglch.github.io" />
-    <updated>2021-07-19T10:20:34.000Z</updated>
+    <updated>2021-07-31T03:24:52.000Z</updated>
+    <entry>
+        <id>https://fzglch.github.io/2021/07/31/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E6%9D%82%E8%B0%88/</id>
+        <title>游戏设计杂谈</title>
+        <link rel="alternate" href="https://fzglch.github.io/2021/07/31/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E6%9D%82%E8%B0%88/"/>
+        <content type="html"></content>
+        <updated>2021-07-31T03:24:52.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://fzglch.github.io/2021/07/30/%E8%8D%92%E6%9C%A8%E6%BC%AB%E7%94%BB%E6%9C%AF/</id>
+        <title>荒木漫画术</title>
+        <link rel="alternate" href="https://fzglch.github.io/2021/07/30/%E8%8D%92%E6%9C%A8%E6%BC%AB%E7%94%BB%E6%9C%AF/"/>
+        <content type="html"></content>
+        <updated>2021-07-30T07:18:49.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://fzglch.github.io/2021/07/29/%E7%BC%96%E6%9B%B2/</id>
+        <title>编曲</title>
+        <link rel="alternate" href="https://fzglch.github.io/2021/07/29/%E7%BC%96%E6%9B%B2/"/>
+        <content type="html"></content>
+        <updated>2021-07-29T15:18:37.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://fzglch.github.io/2021/07/29/%E6%9D%BF%E7%BB%98-PS/</id>
+        <title>板绘&amp;PS</title>
+        <link rel="alternate" href="https://fzglch.github.io/2021/07/29/%E6%9D%BF%E7%BB%98-PS/"/>
+        <content type="html"></content>
+        <updated>2021-07-29T13:03:38.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://fzglch.github.io/2021/07/29/%E4%BD%93%E9%AA%8C%E5%BC%95%E6%93%8E%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id>
+        <title>体验引擎读书笔记</title>
+        <link rel="alternate" href="https://fzglch.github.io/2021/07/29/%E4%BD%93%E9%AA%8C%E5%BC%95%E6%93%8E%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+        <content type="html"></content>
+        <updated>2021-07-29T13:02:19.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://fzglch.github.io/2021/07/29/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%9821-8/</id>
+        <title>每日一题21.8</title>
+        <link rel="alternate" href="https://fzglch.github.io/2021/07/29/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%9821-8/"/>
+        <content type="html"></content>
+        <updated>2021-07-29T13:01:59.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://fzglch.github.io/2021/07/28/3d%E5%BB%BA%E6%A8%A1%E7%AC%94%E8%AE%B0/</id>
+        <title>3d建模笔记</title>
+        <link rel="alternate" href="https://fzglch.github.io/2021/07/28/3d%E5%BB%BA%E6%A8%A1%E7%AC%94%E8%AE%B0/"/>
+        <content type="html"></content>
+        <updated>2021-07-28T15:49:42.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://fzglch.github.io/2021/07/28/unity2d%E5%85%A5%E9%97%A8%E7%9F%A5%E8%AF%86/</id>
+        <title>unity2d入门知识</title>
+        <link rel="alternate" href="https://fzglch.github.io/2021/07/28/unity2d%E5%85%A5%E9%97%A8%E7%9F%A5%E8%AF%86/"/>
+        <content type="html">&lt;h2 id=&#34;素材导入项目创建&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#素材导入项目创建&#34;&gt;#&lt;/a&gt; 素材导入 &amp;amp; 项目创建&lt;/h2&gt;
+&lt;h3 id=&#34;关于plasticscm&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#关于plasticscm&#34;&gt;#&lt;/a&gt; 关于 PlasticSCM&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;span&gt;h&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;以前可以另外单独用PlasticSCM做版本管理，但是国外服务器很慢&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;unity如今自带PlasticSCM用于项目版本管理，设有免费的国内服务器&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;如果需要云端版本管理或是多人创作的，可以考虑使用&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;More info: &lt;a href=&#34;&#34;&gt;暂无&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;编辑素材&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#编辑素材&#34;&gt;#&lt;/a&gt; 编辑素材&lt;/h2&gt;
+&lt;h3 id=&#34;tile-map&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#tile-map&#34;&gt;#&lt;/a&gt; Tile map&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;span&gt;h&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;直译为瓦片地图，是用于以方块为单位创建地图的工具&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;可以用更种事先准备的方块素材来做图，是2d常用工具&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;unity的内容一直在发展，如今tilemap有5种&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;---rectangular：长方形，最常用的一种&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;---hexagonal-pointed-top：六角形-角在上&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;---hexagonal-flat-top：六角形-边在上，和上面这个，是旋转的关系&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token number&#34;&gt;4&lt;/span&gt;---isometric：等距瓦片地图常用于策略类游戏，因为等距透视图允许模拟 3D 游戏元素，&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    例如不同的海拔和视线。这样可使玩家在游戏过程中做出关于移动和定位的战术决策。&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token number&#34;&gt;5&lt;/span&gt;---isometric Z as Y：类似上，只是坐标处理不同了&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLnVuaXR5LmNuL2NuLzIwMjEuMS9NYW51YWwvVGlsZW1hcC1Jc29tZXRyaWMuaHRtbA==&#34;&gt;官方文档对 isometric tile map 的简介&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;tile-map使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#tile-map使用&#34;&gt;#&lt;/a&gt; Tile map 使用&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;span&gt;h&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;最上方，window--2d--tile palette打开窗口&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;create new palette，改个名字，创建，建议自己新建一个对应文件夹来放，素材拖入tile palette窗口&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;如果这时候你的unity报错并显示memory错误后异常退出，记得检查对应文件夹属性是否是只读，或是根据错误提示搜索其他解决方法&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;每个图片对应的pixel per unit可以根据使用需要更改&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;如果你的素材资源是切片，但其sprite mode不是multiple，记得改一下&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;成功后，你的图片素材右边有个类似▶的，点就可以&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;tile palette窗口上也有按键，对应点击可以改鼠标点击功能&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;More info: &lt;a href=&#34;&#34;&gt;暂无&lt;/a&gt;&lt;/p&gt;
+</content>
+        <updated>2021-07-28T15:08:59.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://fzglch.github.io/2021/07/27/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+        <title>python学习笔记</title>
+        <link rel="alternate" href="https://fzglch.github.io/2021/07/27/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+        <content type="html"></content>
+        <updated>2021-07-26T16:35:20.000Z</updated>
+    </entry>
     <entry>
         <id>https://fzglch.github.io/2021/07/19/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
         <title>面向对象</title>
@@ -28,19 +99,33 @@
 &lt;h3 id=&#34;平面上的直线&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#平面上的直线&#34;&gt;#&lt;/a&gt; 平面上的直线&lt;/h3&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;span&gt;h&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;这个问题是讲n条直线最多可以把一个平面分成多少个区域&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;首先，假设第n条直线对k个区域进行了分割，它与之前n-1条直线最多n-1个交点，故k&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;n&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;而当所有直线均不存在平行情况且交点不重叠时，k&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;n；&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;有 L（n）&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;L（n-1）+ n；L1 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;；L2 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;4&lt;/span&gt;；&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;故L（n）&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; n*&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;n-1&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;/2 + &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;那么这节和递归什么关系呢？没找到，全节就“递归式”一词和递归有点关系，且上述证明过程不够严谨，这节的标题起的也不够好，太广了不够明确&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;More info: &lt;a href=&#34;&#34;&gt;暂无&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;约瑟夫问题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#约瑟夫问题&#34;&gt;#&lt;/a&gt; 约瑟夫问题&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;More info: &lt;a href=&#34;&#34;&gt;暂无&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;span&gt;h&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token number&#34;&gt;41&lt;/span&gt;名犹太人被罗马人包围，他们宁愿自杀也不愿被抓，于是开始每隔一人自杀一人，约瑟夫和其一朋友并不想自杀&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;于是通过计算算出最后剩下两人的站位。&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;后由此诞生了一系列类似的问题。&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;More info: &lt;a href=&#34;&#34;&gt;暂无&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;二-和式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-和式&#34;&gt;#&lt;/a&gt; 二、和式&lt;/h2&gt;
-&lt;h3 id=&#34;河内塔-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#河内塔-2&#34;&gt;#&lt;/a&gt; 河内塔&lt;/h3&gt;
+&lt;h3 id=&#34;记号&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#记号&#34;&gt;#&lt;/a&gt; 记号&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;More info: &lt;a href=&#34;&#34;&gt;暂无&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;平面上的直线-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#平面上的直线-2&#34;&gt;#&lt;/a&gt; 平面上的直线&lt;/h3&gt;
+&lt;h3 id=&#34;和式的递推式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#和式的递推式&#34;&gt;#&lt;/a&gt; 和式的递推式&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;More info: &lt;a href=&#34;&#34;&gt;暂无&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;约瑟夫问题-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#约瑟夫问题-2&#34;&gt;#&lt;/a&gt; 约瑟夫问题&lt;/h3&gt;
+&lt;h3 id=&#34;和式的处理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#和式的处理&#34;&gt;#&lt;/a&gt; 和式的处理&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;More info: &lt;a href=&#34;&#34;&gt;暂无&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;多重和式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#多重和式&#34;&gt;#&lt;/a&gt; 多重和式&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;More info: &lt;a href=&#34;&#34;&gt;暂无&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;一般性的方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一般性的方法&#34;&gt;#&lt;/a&gt; 一般性的方法&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;More info: &lt;a href=&#34;&#34;&gt;暂无&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;有限微积分和无限微积分&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#有限微积分和无限微积分&#34;&gt;#&lt;/a&gt; 有限微积分和无限微积分&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;More info: &lt;a href=&#34;&#34;&gt;暂无&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;无限和式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#无限和式&#34;&gt;#&lt;/a&gt; 无限和式&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;More info: &lt;a href=&#34;&#34;&gt;暂无&lt;/a&gt;&lt;/p&gt;
@@ -53,32 +138,6 @@
         <link rel="alternate" href="https://fzglch.github.io/2021/07/19/%E7%99%BD%E4%B9%A6%E8%A1%A5%E5%85%A8%E8%AE%A1%E5%88%92/"/>
         <content type="html"></content>
         <updated>2021-07-19T10:19:27.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://fzglch.github.io/2021/07/19/Little-Pony-and-Harmony-Chest/</id>
-        <title>Little Pony and Harmony Chest</title>
-        <link rel="alternate" href="https://fzglch.github.io/2021/07/19/Little-Pony-and-Harmony-Chest/"/>
-        <content type="html">&lt;p&gt;*2000，状压&lt;/p&gt;
-&lt;h2 id=&#34;源码1&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#源码1&#34;&gt;#&lt;/a&gt; 源码 1&lt;/h2&gt;
-&lt;h3 id=&#34;源码&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#源码&#34;&gt;#&lt;/a&gt; 源码&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;More info: &lt;a href=&#34;&#34;&gt;暂无&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;分析&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#分析&#34;&gt;#&lt;/a&gt; 分析&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;More info: &lt;a href=&#34;&#34;&gt;暂无&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;源码2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#源码2&#34;&gt;#&lt;/a&gt; 源码 2&lt;/h2&gt;
-&lt;h3 id=&#34;源码-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#源码-2&#34;&gt;#&lt;/a&gt; 源码&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;More info: &lt;a href=&#34;&#34;&gt;暂无&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;分析-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#分析-2&#34;&gt;#&lt;/a&gt; 分析&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;More info: &lt;a href=&#34;&#34;&gt;暂无&lt;/a&gt;&lt;/p&gt;
-</content>
-        <updated>2021-07-19T10:11:47.000Z</updated>
     </entry>
     <entry>
         <id>https://fzglch.github.io/2021/07/19/%E5%85%A5%E9%97%A8%E7%9F%A5%E8%AF%86%E7%82%B9B/</id>
@@ -338,6 +397,15 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;More info: &lt;a href=&#34;&#34;&gt;暂无&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;分析-8&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#分析-8&#34;&gt;#&lt;/a&gt; 分析&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;More info: &lt;a href=&#34;&#34;&gt;暂无&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;扩展欧几里得&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#扩展欧几里得&#34;&gt;#&lt;/a&gt; 扩展欧几里得&lt;/h2&gt;
+&lt;h3 id=&#34;源码-9&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#源码-9&#34;&gt;#&lt;/a&gt; 源码&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;More info: &lt;a href=&#34;&#34;&gt;暂无&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;分析-9&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#分析-9&#34;&gt;#&lt;/a&gt; 分析&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;More info: &lt;a href=&#34;&#34;&gt;暂无&lt;/a&gt;&lt;/p&gt;
