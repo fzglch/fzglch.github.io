@@ -100,12 +100,12 @@ YUME SEGAI = Darlin' 夢が叶ったの = 儿时望星光，举手若能摘</tit
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclfw2t96j20zk0m8x6p.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipeun65urj20zk0m81ii.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclj9410cj20zk0m8h12.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicis081o9j20zk0m8dmr.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipet4bz0yj20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipeu7txpzj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclx6phq6j20zk0m8e36.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeybxm1pj20zk0m8niv.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipesrnqv3j20zk0m8ava.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclhnx9glj20zk0m8npd.jpg"></li>
         </ul>
       </div>
     </header>
@@ -149,14 +149,25 @@ YUME SEGAI = Darlin' 夢が叶ったの = 儿时望星光，举手若能摘</tit
   <div class="body md" itemprop="articleBody">
     
 
-    <h2 id="素材导入项目创建"><a class="markdownIt-Anchor" href="#素材导入项目创建">#</a> 素材导入 &amp; 项目创建</h2>
+    <p>遇到要了解的属性，查自己对应版本的 unity 手册是首选方法（计算机类必备技能：查手册）</p>
+<h2 id="素材导入项目创建"><a class="markdownIt-Anchor" href="#素材导入项目创建">#</a> 素材导入 &amp; 项目创建</h2>
 <h3 id="关于plasticscm"><a class="markdownIt-Anchor" href="#关于plasticscm">#</a> 关于 PlasticSCM</h3>
-<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>以前可以另外单独用PlasticSCM做版本管理，但是国外服务器很慢</pre></td></tr><tr><td data-num="2"></td><td><pre>unity如今自带PlasticSCM用于项目版本管理，设有免费的国内服务器</pre></td></tr><tr><td data-num="3"></td><td><pre>如果需要云端版本管理或是多人创作的，可以考虑使用</pre></td></tr></table></figure><p>More info: <a href="">暂无</a></p>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>以前可以另外单独用PlasticSCM做版本管理，但是国外服务器很慢</pre></td></tr><tr><td data-num="2"></td><td><pre>unity如今自带PlasticSCM用于项目版本管理，设有免费的国内服务器</pre></td></tr><tr><td data-num="3"></td><td><pre>如果需要云端版本管理或是多人创作的，可以考虑使用</pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVc0NDExWjdVQy8/c3BtX2lkX2Zyb209MzMzLjc4OC5yZWNvbW1lbmRfbW9yZV92aWRlby4tMQ==">2d 教程其 1</span></p>
 <h2 id="编辑素材"><a class="markdownIt-Anchor" href="#编辑素材">#</a> 编辑素材</h2>
 <h3 id="tile-map"><a class="markdownIt-Anchor" href="#tile-map">#</a> Tile map</h3>
 <figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>直译为瓦片地图，是用于以方块为单位创建地图的工具</pre></td></tr><tr><td data-num="2"></td><td><pre>可以用更种事先准备的方块素材来做图，是2d常用工具</pre></td></tr><tr><td data-num="3"></td><td><pre>unity的内容一直在发展，如今tilemap有5种</pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token number">1</span>---rectangular：长方形，最常用的一种</pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token number">2</span>---hexagonal-pointed-top：六角形-角在上</pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token number">3</span>---hexagonal-flat-top：六角形-边在上，和上面这个，是旋转的关系</pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token number">4</span>---isometric：等距瓦片地图常用于策略类游戏，因为等距透视图允许模拟 3D 游戏元素，</pre></td></tr><tr><td data-num="8"></td><td><pre>    例如不同的海拔和视线。这样可使玩家在游戏过程中做出关于移动和定位的战术决策。</pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token number">5</span>---isometric Z as Y：类似上，只是坐标处理不同了</pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnVuaXR5LmNuL2NuLzIwMjEuMS9NYW51YWwvVGlsZW1hcC1Jc29tZXRyaWMuaHRtbA==">官方文档对 isometric tile map 的简介</span></p>
 <h3 id="tile-map使用"><a class="markdownIt-Anchor" href="#tile-map使用">#</a> Tile map 使用</h3>
-<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>最上方，window--2d--tile palette打开窗口</pre></td></tr><tr><td data-num="2"></td><td><pre>create new palette，改个名字，创建，建议自己新建一个对应文件夹来放，素材拖入tile palette窗口</pre></td></tr><tr><td data-num="3"></td><td><pre>如果这时候你的unity报错并显示memory错误后异常退出，记得检查对应文件夹属性是否是只读，或是根据错误提示搜索其他解决方法</pre></td></tr><tr><td data-num="4"></td><td><pre>每个图片对应的pixel per unit可以根据使用需要更改</pre></td></tr><tr><td data-num="5"></td><td><pre>如果你的素材资源是切片，但其sprite mode不是multiple，记得改一下</pre></td></tr><tr><td data-num="6"></td><td><pre>成功后，你的图片素材右边有个类似▶的，点就可以</pre></td></tr><tr><td data-num="7"></td><td><pre>tile palette窗口上也有按键，对应点击可以改鼠标点击功能</pre></td></tr></table></figure><p>More info: <a href="">暂无</a></p>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>最上方，window--2d--tile palette打开窗口</pre></td></tr><tr><td data-num="2"></td><td><pre>create new palette，改个名字，创建，建议自己新建一个对应文件夹来放，素材拖入tile palette窗口</pre></td></tr><tr><td data-num="3"></td><td><pre>如果这时候你的unity报错并显示memory错误后异常退出，记得检查对应文件夹属性是否是只读，或是根据错误提示搜索其他解决方法</pre></td></tr><tr><td data-num="4"></td><td><pre>每个图片对应的pixel per unit可以根据使用需要更改</pre></td></tr><tr><td data-num="5"></td><td><pre>如果你的素材资源是切片，但其sprite mode不是multiple，记得改一下</pre></td></tr><tr><td data-num="6"></td><td><pre>成功后，你的图片素材右边有个类似▶的，点就可以</pre></td></tr><tr><td data-num="7"></td><td><pre>tile palette窗口上也有按键，对应点击可以改鼠标点击功能</pre></td></tr><tr><td data-num="8"></td><td><pre>tile map 有自己专用的碰撞体组件tilemap collider 2d</pre></td></tr></table></figure><p>More info: <a href="">暂无</a></p>
+<h2 id="图层layer角色建立"><a class="markdownIt-Anchor" href="#图层layer角色建立">#</a> 图层 layer&amp;&amp; 角色建立</h2>
+<h3 id="图层"><a class="markdownIt-Anchor" href="#图层">#</a> 图层</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>右上角有layer，可以选，可以添加，可以用于一些碰撞</pre></td></tr><tr><td data-num="2"></td><td><pre>比如雨水，不与背景碰撞但与其他碰撞，实现方法很多，这是其中一种</pre></td></tr><tr><td data-num="3"></td><td><pre>另外用户图层主要用于限制射线投射或渲染等操作，以便它们仅应用于相关的对象组，它是不带排序的。</pre></td></tr><tr><td data-num="4"></td><td><pre>其中标记为 Builtin Layer 的图层是 Unity 使用的默认图层，无法对其进行编辑。</pre></td></tr><tr><td data-num="5"></td><td><pre>下面属性中有sorting layer和order <span class="token keyword">in</span> layer，会更改排序时所处图层和同图层内的显示顺序</pre></td></tr></table></figure><p>More info: <a href="">暂无</a></p>
+<h3 id="精灵"><a class="markdownIt-Anchor" href="#精灵">#</a> 精灵</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>创建2d精灵有很多基本形状，基本没什么用，当你把帧或者psb拖过去的时候，自然就变成对应形状了，一般是长方形</pre></td></tr><tr><td data-num="2"></td><td><pre>另外如果对细节要求高的，碰撞体可以单独画，也是与2d精灵形状本身无关的</pre></td></tr></table></figure><p>More info: <a href="">暂无</a></p>
+<h2 id=""><a class="markdownIt-Anchor" href="#">#</a> </h2>
+<h3 id="-2"><a class="markdownIt-Anchor" href="#-2">#</a> </h3>
+<pre><code class="language-bash">
+</code></pre>
+<p>More info: <a href="">暂无</a></p>
 
   </div>
 
@@ -168,7 +179,7 @@ YUME SEGAI = Darlin' 夢が叶ったの = 儿时望星光，举手若能摘</tit
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2021-07-29 23:05:43" itemprop="dateModified" datetime="2021-07-29T23:05:43+08:00">2021-07-29</time>
+    <time title="修改时间：2021-08-05 02:26:19" itemprop="dateModified" datetime="2021-08-05T02:26:19+08:00">2021-08-05</time>
   </span>
 </div>
 
@@ -213,17 +224,17 @@ YUME SEGAI = Darlin' 夢が叶ったの = 儿时望星光，举手若能摘</tit
     <div class="item left">
       
 
-  <a href="/2021/07/27/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhtuo6nj20zk0m8ttm.jpg" title="python学习笔记">
+  <a href="/2021/07/19/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclh0m9pdj20zk0m8hdt.jpg" title="面向对象">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>python学习笔记</h3>
+  <h3>面向对象</h3>
   </a>
 
     </div>
     <div class="item right">
       
 
-  <a href="/2021/07/28/3d%E5%BB%BA%E6%A8%A1%E7%AC%94%E8%AE%B0/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclgrvbd6j20zk0m8qv5.jpg" title="3d建模笔记">
+  <a href="/2021/07/28/3d%E5%BB%BA%E6%A8%A1%E7%AC%94%E8%AE%B0/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipew28b65j20zk0m8hdt.jpg" title="3d建模笔记">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>3d建模笔记</h3>
@@ -245,7 +256,7 @@ YUME SEGAI = Darlin' 夢が叶ったの = 儿时望星光，举手若能摘</tit
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B4%A0%E6%9D%90%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA"><span class="toc-number">1.</span> <span class="toc-text"> 素材导入 &amp; 项目创建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8Eplasticscm"><span class="toc-number">1.1.</span> <span class="toc-text"> 关于 PlasticSCM</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E7%B4%A0%E6%9D%90"><span class="toc-number">2.</span> <span class="toc-text"> 编辑素材</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#tile-map"><span class="toc-number">2.1.</span> <span class="toc-text"> Tile map</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tile-map%E4%BD%BF%E7%94%A8"><span class="toc-number">2.2.</span> <span class="toc-text"> Tile map 使用</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B4%A0%E6%9D%90%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA"><span class="toc-number">1.</span> <span class="toc-text"> 素材导入 &amp; 项目创建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8Eplasticscm"><span class="toc-number">1.1.</span> <span class="toc-text"> 关于 PlasticSCM</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E7%B4%A0%E6%9D%90"><span class="toc-number">2.</span> <span class="toc-text"> 编辑素材</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#tile-map"><span class="toc-number">2.1.</span> <span class="toc-text"> Tile map</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tile-map%E4%BD%BF%E7%94%A8"><span class="toc-number">2.2.</span> <span class="toc-text"> Tile map 使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E5%B1%82layer%E8%A7%92%E8%89%B2%E5%BB%BA%E7%AB%8B"><span class="toc-number">3.</span> <span class="toc-text"> 图层 layer&amp;&amp; 角色建立</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E5%B1%82"><span class="toc-number">3.1.</span> <span class="toc-text"> 图层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B2%BE%E7%81%B5"><span class="toc-number">3.2.</span> <span class="toc-text"> 精灵</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text"> </span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#-2"><span class="toc-number">4.1.</span> <span class="toc-text"> </span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
       </div>
@@ -291,7 +302,7 @@ YUME SEGAI = Darlin' 夢が叶ったの = 儿时望星光，举手若能摘</tit
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/2021/07/27/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+        <a href="/2021/07/19/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
@@ -320,70 +331,7 @@ YUME SEGAI = Darlin' 夢が叶ったの = 儿时望星光，举手若能摘</tit
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/07/29/%E6%9D%BF%E7%BB%98-PS/" title="板绘&amp;PS">板绘&PS</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/07/19/%E5%85%B7%E4%BD%93%E6%95%B0%E5%AD%A6/" title="具体数学">具体数学</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/07/31/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E6%9D%82%E8%B0%88/" title="游戏设计杂谈">游戏设计杂谈</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/07/19/%E5%85%A5%E9%97%A8%E7%9F%A5%E8%AF%86%E7%82%B9A/" title="入门知识点A">入门知识点A</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/05/19/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E4%B8%8E%E7%8A%B6%E5%8E%8B/" title="动态规划与状压">动态规划与状压</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/07/27/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="python学习笔记">python学习笔记</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/07/28/unity2d%E5%85%A5%E9%97%A8%E7%9F%A5%E8%AF%86/" title="unity2d入门知识">unity2d入门知识</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/03/03/%E7%BF%BB%E5%94%B1%E6%AD%8C%E6%89%8BJonathan-Young%E7%AE%80%E4%BB%8B/" title="翻唱歌手Jonathan Young简介">翻唱歌手Jonathan Young简介</a></span>
+    <span><a href="/2021/05/16/Top-K/" title="Top K">Top K</a></span>
   </li>
 
       
@@ -401,7 +349,70 @@ YUME SEGAI = Darlin' 夢が叶ったの = 儿时望星光，举手若能摘</tit
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/07/29/%E4%BD%93%E9%AA%8C%E5%BC%95%E6%93%8E%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" title="体验引擎读书笔记">体验引擎读书笔记</a></span>
+    <span><a href="/2021/07/19/%E5%85%B7%E4%BD%93%E6%95%B0%E5%AD%A6/" title="具体数学">具体数学</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/07/28/3d%E5%BB%BA%E6%A8%A1%E7%AC%94%E8%AE%B0/" title="3d建模笔记">3d建模笔记</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/01/31/hello-world/" title="~哈喽喽~">~哈喽喽~</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/07/29/%E7%BC%96%E6%9B%B2/" title="编曲">编曲</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/07/31/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/" title="深入理解计算机系统">深入理解计算机系统</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/07/19/%E5%85%A5%E9%97%A8%E7%9F%A5%E8%AF%86%E7%82%B9A/" title="入门知识点A">入门知识点A</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/04/05/DFS%E5%92%8CBFS/" title="DFS和BFS">DFS和BFS</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/03/03/%E7%BA%BF%E6%AE%B5%E6%A0%91/" title="线段树">线段树</a></span>
   </li>
 
   </ul>
