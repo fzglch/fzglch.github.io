@@ -100,12 +100,12 @@ YUME SEGAI = Darlin' 夢が叶ったの = 儿时望星光，举手若能摘</tit
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipeun65urj20zk0m81ii.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicitspjpbj20zk0m81ky.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicliierfjj20zk0m8npd.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giph4lm9i7j20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclh5u05ej20zk0m87df.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipetlbztpj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicm0fdw5cj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicis081o9j20zk0m8dmr.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipevo9j1jj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclj61ylzj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeyvx1d4j20zk0m8hdt.jpg"></li>
         </ul>
       </div>
     </header>
@@ -163,8 +163,43 @@ YUME SEGAI = Darlin' 夢が叶ったの = 儿时望星光，举手若能摘</tit
 <figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>右上角有layer，可以选，可以添加，可以用于一些碰撞</pre></td></tr><tr><td data-num="2"></td><td><pre>比如雨水，不与背景碰撞但与其他碰撞，实现方法很多，这是其中一种</pre></td></tr><tr><td data-num="3"></td><td><pre>另外用户图层主要用于限制射线投射或渲染等操作，以便它们仅应用于相关的对象组，它是不带排序的。</pre></td></tr><tr><td data-num="4"></td><td><pre>其中标记为 Builtin Layer 的图层是 Unity 使用的默认图层，无法对其进行编辑。</pre></td></tr><tr><td data-num="5"></td><td><pre>下面属性中有sorting layer和order <span class="token keyword">in</span> layer，会更改排序时所处图层和同图层内的显示顺序</pre></td></tr></table></figure><p>More info: <a href="">暂无</a></p>
 <h3 id="精灵"><a class="markdownIt-Anchor" href="#精灵">#</a> 精灵</h3>
 <figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>创建2d精灵有很多基本形状，基本没什么用，当你把帧或者psb拖过去的时候，自然就变成对应形状了，一般是长方形</pre></td></tr><tr><td data-num="2"></td><td><pre>另外如果对细节要求高的，碰撞体可以单独画，也是与2d精灵形状本身无关的</pre></td></tr></table></figure><p>More info: <a href="">暂无</a></p>
+<h2 id="角色移动"><a class="markdownIt-Anchor" href="#角色移动">#</a> 角色移动</h2>
+<p>最基础考虑最少的单纯的移动<br>
+另外 vs 是可以支持 unity 方面的代码补全的，一搜就有，这里不贴了</p>
+<h3 id="script"><a class="markdownIt-Anchor" href="#script">#</a> script</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>using System.Collections<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>using System.Collections.Generic<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>using UnityEngine<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre>public class playerControl <span class="token builtin class-name">:</span> MonoBehaviour</pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    public Rigidbody2D rb<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    private float moveSpeed <span class="token operator">=</span> <span class="token number">10</span>.0f<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    // Start is called before the first frame update</pre></td></tr><tr><td data-num="10"></td><td><pre>    void <span class="token function-name function">Start</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="11"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>        </pre></td></tr><tr><td data-num="13"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="14"></td><td><pre></pre></td></tr><tr><td data-num="15"></td><td><pre>    // Update is called once per frame</pre></td></tr><tr><td data-num="16"></td><td><pre>    void <span class="token function-name function">Update</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="17"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="18"></td><td><pre>        <span class="token keyword">if</span> <span class="token punctuation">(</span>Input.GetAxis<span class="token punctuation">(</span><span class="token string">"Horizontal"</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span>//inputmanager里</pre></td></tr><tr><td data-num="19"></td><td><pre>        <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="20"></td><td><pre>            rb.velocity <span class="token operator">=</span> new Vector2<span class="token punctuation">(</span>Input.GetAxis<span class="token punctuation">(</span><span class="token string">"Horizontal"</span><span class="token punctuation">)</span> * moveSpeed, rb.velocity.y<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="21"></td><td><pre>        <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="22"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="23"></td><td><pre>  </pre></td></tr><tr><td data-num="24"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>这个没有考虑手柄和键盘在GetAxis的区别，键盘是模拟的，</pre></td></tr><tr><td data-num="2"></td><td><pre>手柄根据推的程度可以在-1到1，而键盘只模拟了一个从0到两边的过程，无法中间停留</pre></td></tr><tr><td data-num="3"></td><td><pre>这就使得手柄可以控制速度，而键盘只能全速</pre></td></tr><tr><td data-num="4"></td><td><pre>另外也没有考虑手柄死区的问题，没有速度的提升曲线（这点倒是看需求了）</pre></td></tr><tr><td data-num="5"></td><td><pre>最重要的是，unity中和物理相关的处理不应在update里，应在fixedUpdate里</pre></td></tr><tr><td data-num="6"></td><td><pre>但是足够体验unity中对物体的移动，是很棒的初始入门脚本</pre></td></tr></table></figure><p>More info: <a href="">暂无</a></p>
+<h2 id="角色转向与跳跃"><a class="markdownIt-Anchor" href="#角色转向与跳跃">#</a> 角色转向与跳跃</h2>
+<h3 id="分析"><a class="markdownIt-Anchor" href="#分析">#</a> 分析</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>using System.Collections<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>using System.Collections.Generic<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>using UnityEngine<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre>public class playerControl <span class="token builtin class-name">:</span> MonoBehaviour</pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    public Rigidbody2D rb<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    private float moveSpeed <span class="token operator">=</span> <span class="token number">10</span>.0f<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    private float jumpV0 <span class="token operator">=</span> <span class="token number">10</span>.0f<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    // Start is called before the first frame update</pre></td></tr><tr><td data-num="11"></td><td><pre>    void <span class="token function-name function">Start</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="13"></td><td><pre>        </pre></td></tr><tr><td data-num="14"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="15"></td><td><pre></pre></td></tr><tr><td data-num="16"></td><td><pre>    // Update is called once per frame</pre></td></tr><tr><td data-num="17"></td><td><pre>    void <span class="token function-name function">FixedUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="18"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="19"></td><td><pre>        <span class="token keyword">if</span> <span class="token punctuation">(</span>Input.GetAxis<span class="token punctuation">(</span><span class="token string">"Horizontal"</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span>//inputmanager里</pre></td></tr><tr><td data-num="20"></td><td><pre>        <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="21"></td><td><pre>            rb.velocity <span class="token operator">=</span> new Vector2<span class="token punctuation">(</span>Input.GetAxis<span class="token punctuation">(</span><span class="token string">"Horizontal"</span><span class="token punctuation">)</span> * moveSpeed, rb.velocity.y<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="22"></td><td><pre>            <span class="token keyword">if</span> <span class="token punctuation">(</span>Input.GetAxis<span class="token punctuation">(</span><span class="token string">"Horizontal"</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="23"></td><td><pre>            <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="24"></td><td><pre>                transform.localScale <span class="token operator">=</span> new Vector3<span class="token punctuation">(</span><span class="token number">1</span>, <span class="token number">1</span>, <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="25"></td><td><pre>            <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="26"></td><td><pre>            <span class="token keyword">else</span> transform.localScale <span class="token operator">=</span> new Vector3<span class="token punctuation">(</span>-1, <span class="token number">1</span>, <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="27"></td><td><pre>        <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="28"></td><td><pre>        if<span class="token punctuation">(</span>Input.GetButtonDown<span class="token punctuation">(</span><span class="token string">"Jump"</span><span class="token punctuation">))</span></pre></td></tr><tr><td data-num="29"></td><td><pre>        <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="30"></td><td><pre>            rb.velocity <span class="token operator">=</span> new Vector2<span class="token punctuation">(</span>rb.velocity.x, jumpV0<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="31"></td><td><pre>        <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="32"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="33"></td><td><pre>  </pre></td></tr><tr><td data-num="34"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>这次问题更多了，首先，把物理相关处理放入了fixedupdate是对的</pre></td></tr><tr><td data-num="2"></td><td><pre>但是，捕捉按键也在里面，fixedupdate在不做修改的情况下是一秒50次</pre></td></tr><tr><td data-num="3"></td><td><pre>而这会导致漏掉对按键的捕捉</pre></td></tr><tr><td data-num="4"></td><td><pre>移动方面，水平移动写的是一直修改横向速度，纵向不变，这会导致一个问题</pre></td></tr><tr><td data-num="5"></td><td><pre>就是角色撞上斜面的时候，每次撞击总动能都会变大</pre></td></tr><tr><td data-num="6"></td><td><pre>而跳跃倒挺自然的，检测落地还没有写所以是可无限空跃</pre></td></tr><tr><td data-num="7"></td><td><pre>如果想要细调角色的移动手感，比如加速曲线，减速曲线，空中最高高度滞留等等，那就应需求具体来了</pre></td></tr></table></figure><p>More info: <a href=""></a></p>
+<h2 id="动画"><a class="markdownIt-Anchor" href="#动画">#</a> 动画</h2>
+<h3 id="创建"><a class="markdownIt-Anchor" href="#创建">#</a> 创建</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>组件加animator，资源内创建animator controler，window里进</pre></td></tr><tr><td data-num="2"></td><td><pre>window进animator的parameters里可以设参数控制动画状态</pre></td></tr><tr><td data-num="3"></td><td><pre>在不需要Exit <span class="token function">time</span> 的时候，该关就关</pre></td></tr><tr><td data-num="4"></td><td><pre>如果有需求，查api</pre></td></tr></table></figure><p>More info: <a href=""></a></p>
+<h2 id="修复角色移动"><a class="markdownIt-Anchor" href="#修复角色移动">#</a> 修复角色移动</h2>
+<h3 id="内容"><a class="markdownIt-Anchor" href="#内容">#</a> 内容</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>看了这个标题，我还以为是修之前说的那些代码上的问题，但内容是讲的有关碰撞体</pre></td></tr><tr><td data-num="2"></td><td><pre>up用的tilemap的碰撞体，且每单个方块一个，就导致缝隙角是可以和角色产生碰撞的</pre></td></tr><tr><td data-num="3"></td><td><pre>而这导致了不合理的bug，修复的就是这部分</pre></td></tr><tr><td data-num="4"></td><td><pre>另外，讲了讲不用拖拽得到同物体组件的方法，rb <span class="token operator">=</span> GetCopoment<span class="token operator">&lt;</span>Rigidbody2D<span class="token operator">></span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="5"></td><td><pre>以及显示private的方式，前加<span class="token punctuation">[</span>SerializeField<span class="token punctuation">]</span>，很没必要的两个操作</pre></td></tr></table></figure><p>More info: <a href="">暂无</a></p>
+<h2 id="镜头控制"><a class="markdownIt-Anchor" href="#镜头控制">#</a> 镜头控制</h2>
+<h3 id="源码"><a class="markdownIt-Anchor" href="#源码">#</a> 源码</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>using System.Collections<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>using System.Collections.Generic<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>using UnityEngine<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre>public class cameraControler <span class="token builtin class-name">:</span> MonoBehaviour</pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    public Transform playerTransform<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre></pre></td></tr><tr><td data-num="9"></td><td><pre>    // Update is called once per frame</pre></td></tr><tr><td data-num="10"></td><td><pre>    void <span class="token function-name function">Update</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="11"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>        transform.position <span class="token operator">=</span> new Vector3<span class="token punctuation">(</span>playerTransform.position.x, playerTransform.position.y, transform.position.z<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="13"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><h3 id="关于packagecinemachine"><a class="markdownIt-Anchor" href="#关于packagecinemachine">#</a> 关于 package–Cinemachine</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>做运镜的，镜头跟踪，据说可以做电影？</pre></td></tr><tr><td data-num="2"></td><td><pre>上面菜单新增cinemachine--创建2d镜头</pre></td></tr><tr><td data-num="3"></td><td><pre>不得不说这玩意儿不愧是unity为镜头特制的包，很好用</pre></td></tr><tr><td data-num="4"></td><td><pre>game window guides 中最中心区域是随便活动不变化镜头的部分</pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token function">add</span> extension，选CinemachineConfiner，可以为相机关联其他碰撞体来限制镜头活动范围</pre></td></tr><tr><td data-num="6"></td><td><pre>比如为背景添加polygon collider，这样镜头只会在其内活动</pre></td></tr><tr><td data-num="7"></td><td><pre>另外勾上is Trigger以关闭其物理效果以免弹出其内其他带有碰撞体的物体</pre></td></tr></table></figure><p>More info: <a href="">暂无</a></p>
+<h2 id="物品收集-prefab"><a class="markdownIt-Anchor" href="#物品收集-prefab">#</a> 物品收集 &amp; prefab</h2>
+<p>拖回资源文件夹，就是预制体了</p>
+<h3 id="收集物品"><a class="markdownIt-Anchor" href="#收集物品">#</a> 收集物品</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>using System.Collections<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>using System.Collections.Generic<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>using UnityEngine<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre>public class 樱桃 <span class="token builtin class-name">:</span> MonoBehaviour</pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="7"></td><td><pre></pre></td></tr><tr><td data-num="8"></td><td><pre>    private void OnTriggerEnter2D<span class="token punctuation">(</span>Collider2D collision<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="10"></td><td><pre>        if<span class="token punctuation">(</span>collision.tag <span class="token operator">==</span> <span class="token string">"Player"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="11"></td><td><pre>        <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>            Debug.Log<span class="token punctuation">(</span><span class="token string">"+1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="13"></td><td><pre>            Destroy<span class="token punctuation">(</span>gameObject<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="14"></td><td><pre>        <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="15"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="16"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p>More info: <a href="">暂无</a></p>
+<h2 id="物理材质-空中跳跃"><a class="markdownIt-Anchor" href="#物理材质-空中跳跃">#</a> 物理材质 &amp; 空中跳跃</h2>
+<h3 id="解决摩擦力导致的贴墙滞空问题"><a class="markdownIt-Anchor" href="#解决摩擦力导致的贴墙滞空问题">#</a> 解决摩擦力导致的贴墙滞空问题</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>创个0摩擦系数的物理材质拖到对应碰撞体就行</pre></td></tr></table></figure><h3 id="解决空中连跳问题"><a class="markdownIt-Anchor" href="#解决空中连跳问题">#</a> 解决空中连跳问题</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>using System.Collections<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>using System.Collections.Generic<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>using UnityEngine<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre>public class playerControl <span class="token builtin class-name">:</span> MonoBehaviour</pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    public Rigidbody2D rb<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    private float moveSpeed <span class="token operator">=</span> <span class="token number">10</span>.0f<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    private float jumpV0 <span class="token operator">=</span> <span class="token number">10</span>.0f<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    public Animator anim<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>    public bool canJump<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>    public bool getJump<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="13"></td><td><pre>    public Collider2D coll<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="14"></td><td><pre>    // Start is called before the first frame update</pre></td></tr><tr><td data-num="15"></td><td><pre>    void <span class="token function-name function">Start</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="16"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="17"></td><td><pre>        canJump <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="18"></td><td><pre>        getJump <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="19"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="20"></td><td><pre></pre></td></tr><tr><td data-num="21"></td><td><pre>    private void <span class="token function-name function">Update</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="22"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="23"></td><td><pre>        if<span class="token punctuation">(</span>Input.GetButtonDown<span class="token punctuation">(</span><span class="token string">"Jump"</span><span class="token punctuation">))</span></pre></td></tr><tr><td data-num="24"></td><td><pre>        <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="25"></td><td><pre>            getJump <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="26"></td><td><pre>        <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="27"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="28"></td><td><pre></pre></td></tr><tr><td data-num="29"></td><td><pre>    // Update is called once per frame</pre></td></tr><tr><td data-num="30"></td><td><pre>    void <span class="token function-name function">FixedUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="31"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="32"></td><td><pre>        <span class="token keyword">if</span> <span class="token punctuation">(</span>Input.GetAxis<span class="token punctuation">(</span><span class="token string">"Horizontal"</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span>//inputmanager里</pre></td></tr><tr><td data-num="33"></td><td><pre>        <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="34"></td><td><pre>            rb.velocity <span class="token operator">=</span> new Vector2<span class="token punctuation">(</span>Input.GetAxis<span class="token punctuation">(</span><span class="token string">"Horizontal"</span><span class="token punctuation">)</span> * moveSpeed, rb.velocity.y<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="35"></td><td><pre>            <span class="token keyword">if</span> <span class="token punctuation">(</span>Input.GetAxis<span class="token punctuation">(</span><span class="token string">"Horizontal"</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="36"></td><td><pre>            <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="37"></td><td><pre>                transform.localScale <span class="token operator">=</span> new Vector3<span class="token punctuation">(</span><span class="token number">1</span>, <span class="token number">1</span>, <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="38"></td><td><pre>            <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="39"></td><td><pre>            <span class="token keyword">else</span> transform.localScale <span class="token operator">=</span> new Vector3<span class="token punctuation">(</span>-1, <span class="token number">1</span>, <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="40"></td><td><pre>            anim.SetBool<span class="token punctuation">(</span><span class="token string">"isRuning"</span>, <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="41"></td><td><pre>        <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="42"></td><td><pre>        <span class="token keyword">else</span></pre></td></tr><tr><td data-num="43"></td><td><pre>        <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="44"></td><td><pre>            anim.SetBool<span class="token punctuation">(</span><span class="token string">"isRuning"</span>, <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="45"></td><td><pre>        <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="46"></td><td><pre>        if<span class="token punctuation">(</span>getJump<span class="token operator">==</span>true <span class="token operator">&amp;&amp;</span> <span class="token assign-left variable">canJump</span><span class="token operator">==</span>true<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="47"></td><td><pre>        <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="48"></td><td><pre>            rb.velocity <span class="token operator">=</span> new Vector2<span class="token punctuation">(</span>rb.velocity.x, jumpV0<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="49"></td><td><pre>            canJump <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="50"></td><td><pre>            getJump <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="51"></td><td><pre>        <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="52"></td><td><pre>        if<span class="token punctuation">(</span>coll.IsTouchingLayers<span class="token punctuation">(</span><span class="token punctuation">))</span></pre></td></tr><tr><td data-num="53"></td><td><pre>        <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="54"></td><td><pre>            canJump <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="55"></td><td><pre>            Debug.Log<span class="token punctuation">(</span><span class="token string">"踩地"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="56"></td><td><pre>        <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="57"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="58"></td><td><pre>  </pre></td></tr><tr><td data-num="59"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p>coll.IsTouchingLayers () 是与任何碰撞体接触都会变 bool</p>
+<p>More info: <a href="">暂无</a></p>
+<h2 id="跟随的旋转光球"><a class="markdownIt-Anchor" href="#跟随的旋转光球">#</a> 跟随的旋转光球</h2>
+<h3 id="主要代码"><a class="markdownIt-Anchor" href="#主要代码">#</a> 主要代码</h3>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>h</span></figcaption><table><tr><td data-num="1"></td><td><pre>transform.RotateAround<span class="token punctuation">(</span>中心物体.position,vector3.forward,旋转速度<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUJLNHkxbzdmcg==">对应</span></p>
 <h2 id=""><a class="markdownIt-Anchor" href="#">#</a> </h2>
 <h3 id="-2"><a class="markdownIt-Anchor" href="#-2">#</a> </h3>
+<pre><code class="language-bash">
+</code></pre>
+<p>More info: <a href="">暂无</a></p>
+<h2 id="-3"><a class="markdownIt-Anchor" href="#-3">#</a> </h2>
+<h3 id="-4"><a class="markdownIt-Anchor" href="#-4">#</a> </h3>
 <pre><code class="language-bash">
 </code></pre>
 <p>More info: <a href="">暂无</a></p>
@@ -179,7 +214,7 @@ YUME SEGAI = Darlin' 夢が叶ったの = 儿时望星光，举手若能摘</tit
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2021-08-05 02:26:19" itemprop="dateModified" datetime="2021-08-05T02:26:19+08:00">2021-08-05</time>
+    <time title="修改时间：2021-08-11 00:33:29" itemprop="dateModified" datetime="2021-08-11T00:33:29+08:00">2021-08-11</time>
   </span>
 </div>
 
@@ -224,7 +259,7 @@ YUME SEGAI = Darlin' 夢が叶ったの = 儿时望星光，举手若能摘</tit
     <div class="item left">
       
 
-  <a href="/2021/07/19/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhpw3lwj20zk0m8gvw.jpg" title="面向对象">
+  <a href="/2021/07/19/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipew28b65j20zk0m8hdt.jpg" title="面向对象">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>面向对象</h3>
@@ -234,7 +269,7 @@ YUME SEGAI = Darlin' 夢が叶ったの = 儿时望星光，举手若能摘</tit
     <div class="item right">
       
 
-  <a href="/2021/07/28/3d%E5%BB%BA%E6%A8%A1%E7%AC%94%E8%AE%B0/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicitcxhpij20zk0m8hdt.jpg" title="3d建模笔记">
+  <a href="/2021/07/28/3d%E5%BB%BA%E6%A8%A1%E7%AC%94%E8%AE%B0/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipewr8iypj20zk0m8b29.jpg" title="3d建模笔记">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>3d建模笔记</h3>
@@ -256,7 +291,7 @@ YUME SEGAI = Darlin' 夢が叶ったの = 儿时望星光，举手若能摘</tit
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B4%A0%E6%9D%90%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA"><span class="toc-number">1.</span> <span class="toc-text"> 素材导入 &amp; 项目创建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8Eplasticscm"><span class="toc-number">1.1.</span> <span class="toc-text"> 关于 PlasticSCM</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E7%B4%A0%E6%9D%90"><span class="toc-number">2.</span> <span class="toc-text"> 编辑素材</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#tile-map"><span class="toc-number">2.1.</span> <span class="toc-text"> Tile map</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tile-map%E4%BD%BF%E7%94%A8"><span class="toc-number">2.2.</span> <span class="toc-text"> Tile map 使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E5%B1%82layer%E8%A7%92%E8%89%B2%E5%BB%BA%E7%AB%8B"><span class="toc-number">3.</span> <span class="toc-text"> 图层 layer&amp;&amp; 角色建立</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E5%B1%82"><span class="toc-number">3.1.</span> <span class="toc-text"> 图层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B2%BE%E7%81%B5"><span class="toc-number">3.2.</span> <span class="toc-text"> 精灵</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text"> </span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#-2"><span class="toc-number">4.1.</span> <span class="toc-text"> </span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B4%A0%E6%9D%90%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA"><span class="toc-number">1.</span> <span class="toc-text"> 素材导入 &amp; 项目创建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8Eplasticscm"><span class="toc-number">1.1.</span> <span class="toc-text"> 关于 PlasticSCM</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E7%B4%A0%E6%9D%90"><span class="toc-number">2.</span> <span class="toc-text"> 编辑素材</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#tile-map"><span class="toc-number">2.1.</span> <span class="toc-text"> Tile map</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tile-map%E4%BD%BF%E7%94%A8"><span class="toc-number">2.2.</span> <span class="toc-text"> Tile map 使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E5%B1%82layer%E8%A7%92%E8%89%B2%E5%BB%BA%E7%AB%8B"><span class="toc-number">3.</span> <span class="toc-text"> 图层 layer&amp;&amp; 角色建立</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E5%B1%82"><span class="toc-number">3.1.</span> <span class="toc-text"> 图层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B2%BE%E7%81%B5"><span class="toc-number">3.2.</span> <span class="toc-text"> 精灵</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%92%E8%89%B2%E7%A7%BB%E5%8A%A8"><span class="toc-number">4.</span> <span class="toc-text"> 角色移动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#script"><span class="toc-number">4.1.</span> <span class="toc-text"> script</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%92%E8%89%B2%E8%BD%AC%E5%90%91%E4%B8%8E%E8%B7%B3%E8%B7%83"><span class="toc-number">5.</span> <span class="toc-text"> 角色转向与跳跃</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%9E%90"><span class="toc-number">5.1.</span> <span class="toc-text"> 分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E7%94%BB"><span class="toc-number">6.</span> <span class="toc-text"> 动画</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA"><span class="toc-number">6.1.</span> <span class="toc-text"> 创建</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E5%A4%8D%E8%A7%92%E8%89%B2%E7%A7%BB%E5%8A%A8"><span class="toc-number">7.</span> <span class="toc-text"> 修复角色移动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AE%B9"><span class="toc-number">7.1.</span> <span class="toc-text"> 内容</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%95%9C%E5%A4%B4%E6%8E%A7%E5%88%B6"><span class="toc-number">8.</span> <span class="toc-text"> 镜头控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BA%90%E7%A0%81"><span class="toc-number">8.1.</span> <span class="toc-text"> 源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8Epackagecinemachine"><span class="toc-number">8.2.</span> <span class="toc-text"> 关于 package–Cinemachine</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%A9%E5%93%81%E6%94%B6%E9%9B%86-prefab"><span class="toc-number">9.</span> <span class="toc-text"> 物品收集 &amp; prefab</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%B6%E9%9B%86%E7%89%A9%E5%93%81"><span class="toc-number">9.1.</span> <span class="toc-text"> 收集物品</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%A9%E7%90%86%E6%9D%90%E8%B4%A8-%E7%A9%BA%E4%B8%AD%E8%B7%B3%E8%B7%83"><span class="toc-number">10.</span> <span class="toc-text"> 物理材质 &amp; 空中跳跃</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%91%A9%E6%93%A6%E5%8A%9B%E5%AF%BC%E8%87%B4%E7%9A%84%E8%B4%B4%E5%A2%99%E6%BB%9E%E7%A9%BA%E9%97%AE%E9%A2%98"><span class="toc-number">10.1.</span> <span class="toc-text"> 解决摩擦力导致的贴墙滞空问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E7%A9%BA%E4%B8%AD%E8%BF%9E%E8%B7%B3%E9%97%AE%E9%A2%98"><span class="toc-number">10.2.</span> <span class="toc-text"> 解决空中连跳问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%9F%E9%9A%8F%E7%9A%84%E6%97%8B%E8%BD%AC%E5%85%89%E7%90%83"><span class="toc-number">11.</span> <span class="toc-text"> 跟随的旋转光球</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E4%BB%A3%E7%A0%81"><span class="toc-number">11.1.</span> <span class="toc-text"> 主要代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">12.</span> <span class="toc-text"> </span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#-2"><span class="toc-number">12.1.</span> <span class="toc-text"> </span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-3"><span class="toc-number">13.</span> <span class="toc-text"> </span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#-4"><span class="toc-number">13.1.</span> <span class="toc-text"> </span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
       </div>
@@ -331,7 +366,52 @@ YUME SEGAI = Darlin' 夢が叶ったの = 儿时望星光，举手若能摘</tit
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/04/05/%E9%AB%98%E6%95%88%E7%AD%9B%E8%B4%A8%E6%95%B0/" title="高效筛质数">高效筛质数</a></span>
+    <span><a href="/2021/08/01/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%9821-8/" title="每日一题21.8">每日一题21.8</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/07/19/%E5%85%B7%E4%BD%93%E6%95%B0%E5%AD%A6/" title="具体数学">具体数学</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/07/28/unity2d%E5%85%A5%E9%97%A8%E7%9F%A5%E8%AF%86/" title="unity2d入门知识">unity2d入门知识</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/08/06/%E4%BC%98%E7%A7%80%E5%8A%A8%E6%BC%AB%E4%BD%9C%E5%93%81%E5%89%96%E6%9E%90/" title="优秀动漫作品剖析">优秀动漫作品剖析</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/07/30/%E8%8D%92%E6%9C%A8%E6%BC%AB%E7%94%BB%E6%9C%AF/" title="荒木漫画术">荒木漫画术</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/03/03/%E7%BA%BF%E6%AE%B5%E6%A0%91/" title="线段树">线段树</a></span>
   </li>
 
       
@@ -349,60 +429,6 @@ YUME SEGAI = Darlin' 夢が叶ったの = 儿时望星光，举手若能摘</tit
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/07/19/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="面向对象">面向对象</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/07/19/%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA/" title="算法导论">算法导论</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/04/18/%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF%E4%B8%8E%E5%93%88%E5%AF%86%E5%B0%94%E9%A1%BF%E5%9B%9E%E8%B7%AF/" title="欧拉回路与哈密尔顿回路与欧拉回路">欧拉回路与哈密尔顿回路与欧拉回路</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/07/31/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E6%9D%82%E8%B0%88/" title="游戏设计杂谈">游戏设计杂谈</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/03/03/%E7%BF%BB%E5%94%B1%E6%AD%8C%E6%89%8BJonathan-Young%E7%AE%80%E4%BB%8B/" title="翻唱歌手Jonathan Young简介">翻唱歌手Jonathan Young简介</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/05/11/%E5%9B%BE%E5%AE%9E%E9%AA%8C/" title="图实验">图实验</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
     <span><a href="/2021/07/29/%E7%BC%96%E6%9B%B2/" title="编曲">编曲</a></span>
   </li>
 
@@ -412,7 +438,16 @@ YUME SEGAI = Darlin' 夢が叶ったの = 儿时望星光，举手若能摘</tit
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/07/31/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/" title="深入理解计算机系统">深入理解计算机系统</a></span>
+    <span><a href="/2021/07/19/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="面向对象">面向对象</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/05/16/Top-K/" title="Top K">Top K</a></span>
   </li>
 
   </ul>
